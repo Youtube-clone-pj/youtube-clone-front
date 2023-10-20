@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const HeaderLayout = styled.header`
-	display: flex;
 	width: 100%;
 	position: fixed;
 	background-color: #0f0f0f;
@@ -23,25 +22,30 @@ export const HeaderLeftDiv = styled.div`
 `;
 
 export const ButtonDiv = styled.div`
-	color: #fff;
 	width: 40px;
 	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: 8px;
 
 	& > button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		width: 100%;
 		height: 100%;
 		cursor: pointer;
+
+		&:hover {
+			border-radius: 50%;
+			background-color: rgb(39, 39, 39);
+		}
 
 		& > svg {
 			width: 24px;
 			height: 24px;
 		}
-	}
-
-	&:hover {
-		border-radius: 50%;
-		background-color: rgb(39, 39, 39);
 	}
 `;
 
@@ -61,5 +65,37 @@ export const LogoDiv = styled.div`
 		color: #fff;
 		font-weight: 700;
 		letter-spacing: -0.05em;
+	}
+`;
+
+export const HeaderRightDiv = styled.div`
+	min-width: 225px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+`;
+
+export const LoginDiv = styled.div`
+	padding: 0 15px;
+	color: #3ea6ff;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 18px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: rgb(42, 56, 78);
+	}
+
+	& > svg {
+		width: 24px;
+		height: 24px;
+	}
+
+	& > h2 {
+		font-size: 14px;
+		line-height: 36px;
 	}
 `;
