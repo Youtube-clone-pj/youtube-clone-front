@@ -7,7 +7,7 @@ import {
 	ButtonDiv,
 	LogoDiv,
 } from "./Header.styles";
-// import SearchBar from "./Search/SearchBar";
+import SearchBar from "./Search/SearchBar";
 
 const Header = () => {
 	return (
@@ -24,6 +24,7 @@ const Header = () => {
 						<h2>YouTube</h2>
 					</LogoDiv>
 				</HeaderLeftDiv>
+				<SearchBar />
 			</HeaderInnerDiv>
 		</HeaderLayout>
 	);

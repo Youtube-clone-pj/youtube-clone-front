@@ -19,7 +19,7 @@ export const HeaderInnerDiv = styled.div`
 export const HeaderLeftDiv = styled.div`
 	display: flex;
 	align-items: center;
-	gap: 6px;
+	gap: 16px;
 `;
 
 export const ButtonDiv = styled.div`
