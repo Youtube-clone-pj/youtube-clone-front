@@ -1,14 +1,17 @@
+import { HeaderMenuIcon, LogoIcon } from "@/constants/icon";
+
 import {
-	HeaderDiv,
+	HeaderLayout,
 	HeaderInnerDiv,
 	HeaderLeftDiv,
 	ButtonDiv,
+	LogoDiv,
 } from "./Header.styles";
-import { HeaderMenuIcon } from "@/constants/icon";
+// import SearchBar from "./Search/SearchBar";
 
 const Header = () => {
 	return (
-		<HeaderDiv>
+		<HeaderLayout>
 			<HeaderInnerDiv>
 				<HeaderLeftDiv>
 					<ButtonDiv>
@@ -16,9 +19,13 @@ const Header = () => {
 							<HeaderMenuIcon />
 						</button>
 					</ButtonDiv>
+					<LogoDiv>
+						<LogoIcon />
+						<h2>YouTube</h2>
+					</LogoDiv>
 				</HeaderLeftDiv>
 			</HeaderInnerDiv>
-		</HeaderDiv>
+		</HeaderLayout>
 	);
 };
 

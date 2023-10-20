@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeaderDiv = styled.header`
+export const HeaderLayout = styled.header`
 	display: flex;
 	width: 100%;
 	position: fixed;
@@ -19,6 +19,7 @@ export const HeaderInnerDiv = styled.div`
 export const HeaderLeftDiv = styled.div`
 	display: flex;
 	align-items: center;
+	gap: 6px;
 `;
 
 export const ButtonDiv = styled.div`
@@ -41,5 +42,24 @@ export const ButtonDiv = styled.div`
 	&:hover {
 		border-radius: 50%;
 		background-color: rgb(39, 39, 39);
+	}
+`;
+
+export const LogoDiv = styled.div`
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	cursor: pointer;
+
+	& > svg {
+		width: 24px;
+		height: 24px;
+	}
+
+	& > h2 {
+		font-size: 24px;
+		color: #fff;
+		font-weight: 700;
+		letter-spacing: -0.05em;
 	}
 `;
