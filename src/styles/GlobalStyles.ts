@@ -4,6 +4,11 @@ const GlobalStyles = createGlobalStyle`${css`
 	html {
 		box-sizing: border-box;
 	}
+	*,
+	:after,
+	:before {
+		box-sizing: inherit;
+	}
 	body,
 	button,
 	dd,
