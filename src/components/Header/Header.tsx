@@ -3,7 +3,7 @@ import {
 	LogoIcon,
 	HeaderMoreIcon,
 	LoginIcon,
-} from "@/constants/icon";
+} from "@/constants/Icon/icon";
 
 import {
 	HeaderLayout,

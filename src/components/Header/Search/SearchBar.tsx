@@ -1,4 +1,4 @@
-import { SearchIcon } from "@/constants/icon";
+import { SearchIcon } from "@/constants/Icon/icon";
 
 import { SearchBarLayout, SearchDiv } from "./SearchBar.styles";
 
