@@ -1,28 +1,13 @@
-import { SidebarData } from "@/constants/data/SidebarData";
-
-import {
-	SidebarLayout,
-	SidebarDiv,
-	ContentUl,
-	ItemDiv,
-} from "./Sidebar.styles";
+import { SidebarLayout, SidebarDiv, ContentDiv } from "./Sidebar.styles";
+import SidebarList from "./SidebarList";
 
 const Sidebar = () => {
 	return (
 		<SidebarLayout>
 			<SidebarDiv>
-				<ContentUl>
-					{SidebarData.map((data) => (
-						<a href={data.link}>
-							<li key={data.title}>
-								<ItemDiv>
-									{data.icon}
-									<h2>{data.title}</h2>
-								</ItemDiv>
-							</li>
-						</a>
-					))}
-				</ContentUl>
+				<ContentDiv>
+					<SidebarList />
+				</ContentDiv>
 			</SidebarDiv>
 		</SidebarLayout>
 	);
