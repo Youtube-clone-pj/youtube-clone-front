@@ -1,4 +1,5 @@
 import { SidebarLayout, SidebarDiv, ContentDiv } from "./Sidebar.styles";
+import SidebarFooter from "./SidebarFooter";
 import SidebarList from "./SidebarList";
 
 const Sidebar = () => {
@@ -7,6 +8,7 @@ const Sidebar = () => {
 			<SidebarDiv>
 				<ContentDiv>
 					<SidebarList />
+					<SidebarFooter />
 				</ContentDiv>
 			</SidebarDiv>
 		</SidebarLayout>

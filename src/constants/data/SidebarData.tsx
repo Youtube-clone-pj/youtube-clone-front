@@ -142,3 +142,68 @@ export const SidebarData = [
 		list: ListSettingData,
 	},
 ];
+
+const FooterPrimaryData = [
+	{
+		title: "정보",
+		link: "/",
+	},
+	{
+		title: "보도자료",
+		link: "/",
+	},
+	{
+		title: "저작권",
+		link: "/",
+	},
+	{
+		title: "문의하기",
+		link: "/",
+	},
+	{
+		title: "크리에이터",
+		link: "/",
+	},
+	{
+		title: "광고",
+		link: "/",
+	},
+	{
+		title: "개발자",
+		link: "/",
+	},
+];
+
+const FooterSecondaryData = [
+	{
+		title: "약관",
+		link: "/",
+	},
+	{
+		title: "개인정보처리방침",
+		link: "/",
+	},
+	{
+		title: "정책 및 안전",
+		link: "/",
+	},
+	{
+		title: "WeTube 작동의 원리",
+		link: "/",
+	},
+	{
+		title: "새로운 기능 테스트하기",
+		link: "/",
+	},
+];
+
+export const SidebarFooterData = [
+	{
+		title: "primary",
+		list: FooterPrimaryData,
+	},
+	{
+		title: "secondary",
+		list: FooterSecondaryData,
+	},
+];
