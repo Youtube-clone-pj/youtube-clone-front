@@ -2,10 +2,9 @@ import { useState } from "react";
 
 import { HeaderMoreIcon } from "@/constants/Icon/icon";
 
-import { videoCardType } from "./VideoList";
 import {
-	VideoItemDiv,
-	VideoItemInnerDiv,
+	VideoCardLayout,
+	CardInnerDiv,
 	ThumbnailDiv,
 	ImgDiv,
 	OverlayDiv,
@@ -16,7 +15,8 @@ import {
 	ProfileDiv,
 	TextDiv,
 	MenuDiv,
-} from "./VideoList.styles";
+} from "./VideoCard.styles";
+import { videoCardType } from "./VideoList";
 
 const VideoCard = (cardData: videoCardType) => {
 	const [optionMenuHoverIndex, setOptionMenuHoverIndex] = useState<
@@ -27,8 +27,8 @@ const VideoCard = (cardData: videoCardType) => {
 		setOptionMenuHoverIndex((prev) => (prev === num ? null : num));
 
 	return (
-		<VideoItemDiv>
-			<VideoItemInnerDiv>
+		<VideoCardLayout>
+			<CardInnerDiv>
 				<ThumbnailDiv>
 					<a href={`/detail/${cardData.postId}`}>
 						<ImgDiv>
@@ -73,8 +73,8 @@ const VideoCard = (cardData: videoCardType) => {
 						<HeaderMoreIcon size={24} color="#fff" />
 					</MenuDiv>
 				</DetailInfoDiv>
-			</VideoItemInnerDiv>
-		</VideoItemDiv>
+			</CardInnerDiv>
+		</VideoCardLayout>
 	);
 };
 
