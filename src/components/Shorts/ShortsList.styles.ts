@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const ShortsLayout = styled.div`
+export const ShortsListLayout = styled.div`
 	width: 100%;
 	background-color: #0f0f0f;
 `;
 
-export const ShortsRowDiv = styled.div`
+export const ShortsListRowDiv = styled.div`
 	margin: 0 24px;
 `;
 

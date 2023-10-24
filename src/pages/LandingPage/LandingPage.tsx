@@ -1,5 +1,5 @@
 import Header from "@/components/Header/Header";
-import Shorts from "@/components/Shorts/Shorts";
+import ShortsList from "@/components/Shorts/ShortsList";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import Tagbar from "@/components/Tagbar/Tagbar";
 import VideoList from "@/components/Video/VideoList";
@@ -14,7 +14,7 @@ const LandingPage = () => {
 			<ContentDiv>
 				<Tagbar />
 				<VideoList />
-				<Shorts />
+				<ShortsList />
 			</ContentDiv>
 		</>
 	);

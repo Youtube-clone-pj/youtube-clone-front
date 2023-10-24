@@ -2,7 +2,6 @@ import { useState } from "react";
 
 import { HeaderMoreIcon } from "@/constants/Icon/icon";
 
-import { shortsCardType } from "./Shorts";
 import {
 	ShortsCardLayout,
 	CardInnerDiv,
@@ -11,6 +10,7 @@ import {
 	DetailInfoDiv,
 	MenuDiv,
 } from "./ShortsCard.styles";
+import { shortsCardType } from "./ShortsList";
 
 const ShortsCard = (cardData: shortsCardType) => {
 	const [optionMenuHoverIndex, setOptionMenuHoverIndex] = useState<

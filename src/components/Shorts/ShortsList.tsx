@@ -1,13 +1,13 @@
 import { ShortsIcon } from "@/constants/Icon/icon";
 
+import ShortsCard from "./ShortsCard";
 import {
-	ShortsLayout,
-	ShortsRowDiv,
+	ShortsListLayout,
+	ShortsListRowDiv,
 	RowInnerDiv,
 	TitleDiv,
 	VideoDiv,
-} from "./Shorts.styles";
-import ShortsCard from "./ShortsCard";
+} from "./ShortsList.styles";
 
 export interface shortsCardType {
 	shortsId: number;
@@ -61,10 +61,10 @@ const mockItems = [
 	},
 ];
 
-const Shorts = () => {
+const ShortsList = () => {
 	return (
-		<ShortsLayout>
-			<ShortsRowDiv>
+		<ShortsListLayout>
+			<ShortsListRowDiv>
 				<RowInnerDiv>
 					<TitleDiv>
 						<h2>
@@ -78,9 +78,9 @@ const Shorts = () => {
 						))}
 					</VideoDiv>
 				</RowInnerDiv>
-			</ShortsRowDiv>
-		</ShortsLayout>
+			</ShortsListRowDiv>
+		</ShortsListLayout>
 	);
 };
 
-export default Shorts;
+export default ShortsList;
