@@ -1,14 +1,26 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LandingPage from "@/pages/LandingPage";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import { LandingPage, VideoDetailPage, Root } from "./pages";
+
+const router = createBrowserRouter([
+	{
+		path: "/",
+		element: <Root />,
+		children: [
+			{
+				path: "/",
+				element: <LandingPage />,
+			},
+			{
+				path: "/detail/:id",
+				element: <VideoDetailPage />,
+			},
+		],
+	},
+]);
 
 const App = () => {
-	return (
-		<BrowserRouter>
-			<Routes>
-				<Route path="/" element={<LandingPage />} />
-			</Routes>
-		</BrowserRouter>
-	);
+	return <RouterProvider router={router} />;
 };
 
 export default App;
