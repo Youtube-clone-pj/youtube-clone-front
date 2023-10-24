@@ -1,24 +1,20 @@
-import { useState } from "react";
-
-import { HeaderMoreIcon } from "@/constants/Icon/icon";
-
+import VideoCard from "./VideoCard";
 import {
-	ContentLayout,
-	ContentRowDiv,
+	VideoListLayout,
+	VidoeListRowDiv,
 	RowInnerDiv,
-	VideoItemDiv,
-	VideoItemInnerDiv,
-	ThumbnailDiv,
-	ImgDiv,
-	OverlayDiv,
-	ProgressFullDiv,
-	ProgressLiveDiv,
-	TimeStampDiv,
-	DetailInfoDiv,
-	ProfileDiv,
-	TextDiv,
-	MenuDiv,
-} from "./Contents.styles";
+} from "./VideoList.styles";
+
+export interface videoCardType {
+	postId: number;
+	postTitle: string;
+	postView: string;
+	postDate: string;
+	postVideoThumbnail: string;
+	postVideoTime: string;
+	postOwnerChannel: string;
+	postOwnerThumbnail: string;
+}
 
 const count = [1, 2, 3, 4];
 
@@ -73,71 +69,20 @@ const mockItems = [
 	},
 ];
 
-const Contents = () => {
-	const [optionMenuHoverIndex, setOptionMenuHoverIndex] = useState<
-		number | null
-	>(null);
-
-	const handleOption = (num: number) =>
-		setOptionMenuHoverIndex((prev) => (prev === num ? null : num));
-
+const VideoList = () => {
 	return (
-		<ContentLayout>
-			<ContentRowDiv>
+		<VideoListLayout>
+			<VidoeListRowDiv>
 				{count.map((count) => (
 					<RowInnerDiv key={count}>
-						{mockItems.map((data) => (
-							<VideoItemDiv key={data.postId}>
-								<VideoItemInnerDiv>
-									<ThumbnailDiv>
-										<a href={`/detail/${data.postId}`}>
-											<ImgDiv>
-												<img src={data.postVideoThumbnail} alt="img" />
-											</ImgDiv>
-											<OverlayDiv>
-												<ProgressFullDiv>
-													<ProgressLiveDiv />
-												</ProgressFullDiv>
-												<TimeStampDiv>
-													<span>{data.postVideoTime}</span>
-												</TimeStampDiv>
-											</OverlayDiv>
-										</a>
-									</ThumbnailDiv>
-									<DetailInfoDiv
-										onMouseOver={() => {
-											handleOption(data.postId);
-										}}
-									>
-										<a href="/">
-											<ProfileDiv>
-												<img src={data.postOwnerThumbnail} alt="profile" />
-											</ProfileDiv>
-										</a>
-										<TextDiv>
-											<h3>
-												<a href="/">{data.postTitle}</a>
-											</h3>
-											<h4>
-												<a href="/">{data.postOwnerChannel}</a>
-											</h4>
-											<h4>
-												<span>조회수 {data.postView}</span>
-												<span>{data.postDate}</span>
-											</h4>
-										</TextDiv>
-										<MenuDiv onHover={optionMenuHoverIndex === data.postId}>
-											<HeaderMoreIcon size={24} color="#fff" />
-										</MenuDiv>
-									</DetailInfoDiv>
-								</VideoItemInnerDiv>
-							</VideoItemDiv>
+						{mockItems.map((cardData) => (
+							<VideoCard {...cardData} key={cardData.postId} />
 						))}
 					</RowInnerDiv>
 				))}
-			</ContentRowDiv>
-		</ContentLayout>
+			</VidoeListRowDiv>
+		</VideoListLayout>
 	);
 };
 
-export default Contents;
+export default VideoList;

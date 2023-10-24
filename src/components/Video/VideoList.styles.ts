@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-export const ContentLayout = styled.div`
+export const VideoListLayout = styled.div`
 	width: 100%;
 	padding-top: 24px;
 	margin-top: 56px;
 	background-color: #0f0f0f;
 `;
 
-export const ContentRowDiv = styled.div``;
+export const VidoeListRowDiv = styled.div``;
 
 export const RowInnerDiv = styled.div`
 	margin: 0 16px;
@@ -156,8 +156,8 @@ export const TextDiv = styled.div`
 	}
 `;
 
-export const MenuDiv = styled.div<{ onHover: boolean }>`
-	display: ${({ onHover }) => (onHover ? "flex" : "none")};
+export const MenuDiv = styled.div<{ $showmenu: boolean }>`
+	display: ${({ $showmenu }) => ($showmenu ? "flex" : "none")};
 	align-items: center;
 	justify-content: center;
 	position: absolute;
