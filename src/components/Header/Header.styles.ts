@@ -27,6 +27,7 @@ export const ButtonDiv = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
 
 	& > button {
 		display: flex;
@@ -67,11 +68,14 @@ export const LogoDiv = styled.div`
 	}
 `;
 
-export const HeaderRightDiv = styled.div`
+export const HeaderRightDiv = styled.div``;
+
+export const RightInnerDiv = styled.div`
 	min-width: 225px;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	gap: 12px;
 `;
 
 export const LoginDiv = styled.div`
@@ -96,5 +100,27 @@ export const LoginDiv = styled.div`
 	& > h2 {
 		font-size: 14px;
 		line-height: 36px;
+	}
+`;
+
+export const ProfileDiv = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	margin-left: 12px;
+	position: relative;
+
+	& > button {
+		width: 32px;
+		height: 32px;
+		cursor: pointer;
+
+		& > img {
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+		}
 	}
 `;

@@ -1,6 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { LandingPage, VideoWatchPage, ShortsPage, Root } from "./pages";
+import {
+	LandingPage,
+	VideoWatchPage,
+	ShortsPage,
+	StudioPage,
+	Root,
+} from "./pages";
 
 const router = createBrowserRouter([
 	{
@@ -20,6 +26,10 @@ const router = createBrowserRouter([
 	{
 		path: "/watch/:id",
 		element: <VideoWatchPage />,
+	},
+	{
+		path: "/studio",
+		element: <StudioPage />,
 	},
 ]);
 
