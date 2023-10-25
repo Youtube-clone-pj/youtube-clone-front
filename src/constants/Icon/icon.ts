@@ -30,6 +30,7 @@ import {
 import HeaderMenuIcon from "@/assets/icon/ic-header-menu.svg?react";
 import LogoIcon from "@/assets/icon/ic-logo.svg?react";
 import SearchIcon from "@/assets/icon/ic-search.svg?react";
+import ShortsIcon from "@/assets/icon/ic-shorts.svg?react";
 
 export {
 	HeaderMenuIcon,
@@ -55,4 +56,5 @@ export {
 	SideReportIcon,
 	SideCenterIcon,
 	SideInfoIcon,
+	ShortsIcon,
 };
