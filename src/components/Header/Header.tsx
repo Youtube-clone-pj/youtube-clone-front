@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import {
 	HeaderMenuIcon,
@@ -27,6 +28,8 @@ const Header = () => {
 	const isLogin = true;
 
 	const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
+
+	const navigate = useNavigate();
 
 	const profileRef = useRef<HTMLButtonElement>(null);
 
@@ -69,7 +72,12 @@ const Header = () => {
 					{isLogin ? (
 						<RightInnerDiv>
 							<ButtonDiv>
-								<button type="button">
+								<button
+									type="button"
+									onClick={() => {
+										navigate("/studio");
+									}}
+								>
 									<HeaderUploadIcon color="#fff" />
 								</button>
 							</ButtonDiv>
