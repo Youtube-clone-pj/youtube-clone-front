@@ -31,6 +31,7 @@ import {
 
 import HeaderMenuIcon from "@/assets/icon/ic-header-menu.svg?react";
 import HeaderLogoIcon from "@/assets/icon/ic-logo.svg?react";
+import NotificationIcon from "@/assets/icon/ic-notification.svg?react";
 import ProfileCenterIcon from "@/assets/icon/ic-profile-center.svg?react";
 import ProfileChangeIcon from "@/assets/icon/ic-profile-change.svg?react";
 import ProfileChannelIcon from "@/assets/icon/ic-profile-channel.svg?react";
@@ -77,4 +78,5 @@ export {
 	ProfileOpinionIcon,
 	ProfileSettingIcon,
 	ProfileThemeIcon,
+	NotificationIcon,
 };

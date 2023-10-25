@@ -21,23 +21,34 @@ import {
 	LoginDiv,
 	ProfileDiv,
 } from "./Header.styles";
-import ProfileDropdown from "./ProfileDropdown";
+import Notification from "./Notification/Notification";
+import ProfileDropdown from "./ProfileDropdown/ProfileDropdown";
 import SearchBar from "./Search/SearchBar";
 
 const Header = () => {
 	const isLogin = true;
 
 	const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
+	const [isNotificationOpen, setIsNotificationOpen] = useState<boolean>(false);
 
 	const navigate = useNavigate();
 
 	const profileRef = useRef<HTMLButtonElement>(null);
+	const notificationRef = useRef<HTMLButtonElement>(null);
 
 	const handleDropdown = (e: CustomEvent<MouseEvent>) => {
 		const target = e.target as HTMLImageElement;
 
 		if (!profileRef?.current?.contains(target)) {
 			setIsDropdownOpen(!isDropdownOpen);
+		}
+	};
+
+	const handleNotification = (e: CustomEvent<MouseEvent>) => {
+		const targets = e.target as HTMLButtonElement;
+
+		if (!notificationRef?.current?.contains(targets)) {
+			setIsNotificationOpen(!isNotificationOpen);
 		}
 	};
 
@@ -49,7 +60,17 @@ const Header = () => {
 		return () => {
 			window.addEventListener("click", handleDropdown as EventListener);
 		};
-	});
+	}, [isDropdownOpen]);
+
+	useEffect(() => {
+		if (isNotificationOpen) {
+			window.addEventListener("click", handleNotification as EventListener);
+		}
+
+		return () => {
+			window.addEventListener("click", handleNotification as EventListener);
+		};
+	}, [isNotificationOpen]);
 
 	return (
 		<HeaderLayout>
@@ -82,9 +103,13 @@ const Header = () => {
 								</button>
 							</ButtonDiv>
 							<ButtonDiv>
-								<button type="button">
-									<HeaderNotificationIcon color="#fff" />
+								<button type="button" ref={notificationRef}>
+									<HeaderNotificationIcon
+										color="#fff"
+										onClick={() => setIsNotificationOpen(!isNotificationOpen)}
+									/>
 								</button>
+								{isNotificationOpen && <Notification />}
 							</ButtonDiv>
 							<ProfileDiv>
 								<button type="button" ref={profileRef}>
@@ -108,7 +133,7 @@ const Header = () => {
 							<LoginDiv>
 								<LoginPersonIcon />
 								<h2>로그인</h2>
-							</LoginDiv>{" "}
+							</LoginDiv>
 						</RightInnerDiv>
 					)}
 				</HeaderRightDiv>

@@ -27,6 +27,7 @@ export const ButtonDiv = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
 
 	& > button {
 		display: flex;
