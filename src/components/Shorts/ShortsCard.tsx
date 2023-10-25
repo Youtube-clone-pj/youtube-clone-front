@@ -24,7 +24,7 @@ const ShortsCard = (cardData: shortsCardType) => {
 		<ShortsCardLayout>
 			<CardInnerDiv>
 				<ThumbnailDiv>
-					<a href="/">
+					<a href={`/shorts/${cardData.shortsId}`}>
 						<ImgDiv>
 							<img src={cardData.shortsVideoThumbnail} alt="img" />
 						</ImgDiv>

@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { LandingPage, VideoDetailPage, Root } from "./pages";
+import { LandingPage, VideoWatchPage, ShortsPage, Root } from "./pages";
 
 const router = createBrowserRouter([
 	{
@@ -12,10 +12,14 @@ const router = createBrowserRouter([
 				element: <LandingPage />,
 			},
 			{
-				path: "/detail/:id",
-				element: <VideoDetailPage />,
+				path: "/shorts/:id",
+				element: <ShortsPage />,
 			},
 		],
+	},
+	{
+		path: "/watch/:id",
+		element: <VideoWatchPage />,
 	},
 ]);
 

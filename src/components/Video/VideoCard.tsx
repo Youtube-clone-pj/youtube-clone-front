@@ -30,7 +30,7 @@ const VideoCard = (cardData: videoCardType) => {
 		<VideoCardLayout>
 			<CardInnerDiv>
 				<ThumbnailDiv>
-					<a href={`/detail/${cardData.postId}`}>
+					<a href={`/watch/${cardData.postId}`}>
 						<ImgDiv>
 							<img src={cardData.postVideoThumbnail} alt="img" />
 						</ImgDiv>
