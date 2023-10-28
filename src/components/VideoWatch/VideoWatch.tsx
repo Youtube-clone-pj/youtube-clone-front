@@ -1,3 +1,4 @@
+import VideoDetail from "./VideoDetail";
 import VideoPlayer from "./VideoPlayer";
 import {
 	VideoWatchLayout,
@@ -14,6 +15,7 @@ const VideoWatch = () => {
 				<PrimaryDiv>
 					<PrimaryInnerDiv>
 						<VideoPlayer />
+						<VideoDetail />
 					</PrimaryInnerDiv>
 				</PrimaryDiv>
 				<SecondaryDiv />

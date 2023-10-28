@@ -171,8 +171,6 @@ const VideoControls = forwardRef(
 			handleTimeUpdate,
 		}));
 
-		console.log(progressTime);
-
 		return (
 			<>
 				{showControl && (
