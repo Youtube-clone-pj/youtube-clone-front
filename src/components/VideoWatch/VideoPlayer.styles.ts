@@ -21,3 +21,9 @@ export const ContainerInnerDiv = styled.div`
 	position: relative;
 	width: 100%;
 `;
+
+export const Video = styled.video`
+	&::-webkit-media-controls {
+		display: none !important;
+	}
+`;
