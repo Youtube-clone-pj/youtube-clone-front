@@ -42,6 +42,12 @@ import ProfileStudioIcon from "@/assets/icon/ic-profile-studio.svg?react";
 import ProfileThemeIcon from "@/assets/icon/ic-profile-theme.svg?react";
 import SearchIcon from "@/assets/icon/ic-search.svg?react";
 import ShortsIcon from "@/assets/icon/ic-shorts.svg?react";
+import FullScreenCancelIcon from "@/assets/icon/VideoControl/ic-full-screen-cancel.svg?react";
+import FullScreenIcon from "@/assets/icon/VideoControl/ic-full-screen.svg?react";
+import NextIcon from "@/assets/icon/VideoControl/ic-next.svg?react";
+import PlayIcon from "@/assets/icon/VideoControl/ic-play.svg?react";
+import StopIcon from "@/assets/icon/VideoControl/ic-stop.svg?react";
+import VolumeIcon from "@/assets/icon/VideoControl/ic-volume.svg?react";
 
 export {
 	HeaderMenuIcon,
@@ -79,4 +85,10 @@ export {
 	ProfileSettingIcon,
 	ProfileThemeIcon,
 	NotificationIcon,
+	FullScreenCancelIcon,
+	FullScreenIcon,
+	NextIcon,
+	PlayIcon,
+	StopIcon,
+	VolumeIcon,
 };

@@ -67,4 +67,31 @@ export const ProgressCircle = styled.div`
 		-webkit-transform 0.1s cubic-bezier(0.4, 0, 1, 1);
 `;
 
-export const ControlDiv = styled.div``;
+export const ControlDiv = styled.div`
+	display: flex;
+	height: 48px;
+	line-height: 48px;
+`;
+
+export const LeftDiv = styled.div`
+	display: flex;
+	justify-content: flex-start;
+	flex: 1 1;
+
+	& > button {
+		width: 46px;
+		cursor: pointer;
+	}
+`;
+
+export const TimeDiv = styled.div`
+	display: flex;
+	align-items: center;
+	color: #fff;
+	font-size: 15px;
+	z-index: 50;
+`;
+
+export const RightDiv = styled(LeftDiv)`
+	justify-content: flex-end;
+`;

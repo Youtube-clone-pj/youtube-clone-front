@@ -1,4 +1,11 @@
 import {
+	NextIcon,
+	PlayIcon,
+	VolumeIcon,
+	FullScreenIcon,
+} from "@/constants/Icon/icon";
+
+import {
 	VideoControlLayout,
 	ProgressbarDiv,
 	ProgressInnerDiv,
@@ -8,6 +15,9 @@ import {
 	ProgressCircleDiv,
 	ProgressCircle,
 	ControlDiv,
+	LeftDiv,
+	TimeDiv,
+	RightDiv,
 } from "./VideoControls.styles";
 
 const VideoControls = () => {
@@ -25,7 +35,25 @@ const VideoControls = () => {
 					</ProgressCircleDiv>
 				</ProgressInnerDiv>
 			</ProgressbarDiv>
-			<ControlDiv />
+			<ControlDiv>
+				<LeftDiv>
+					<button>
+						<PlayIcon />
+					</button>
+					<button>
+						<NextIcon />
+					</button>
+					<TimeDiv>01:00 ~ 03:00</TimeDiv>
+				</LeftDiv>
+				<RightDiv>
+					<button>
+						<VolumeIcon />
+					</button>
+					<button>
+						<FullScreenIcon />
+					</button>
+				</RightDiv>
+			</ControlDiv>
 		</VideoControlLayout>
 	);
 };
