@@ -15,14 +15,15 @@ export const VideoContainerDiv = styled.div`
 `;
 
 export const ContainerInnerDiv = styled.div`
-	height: 100%;
 	outline: none;
 	overflow: hidden;
 	position: relative;
-	width: 100%;
 `;
 
 export const Video = styled.video`
+	width: 100%;
+	height: 100%;
+
 	&::-webkit-media-controls {
 		display: none !important;
 	}

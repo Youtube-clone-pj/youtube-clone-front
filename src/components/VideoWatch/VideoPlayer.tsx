@@ -66,13 +66,13 @@ const VideoPlayer = () => {
 		},
 	};
 
-	// const controlProps = {
-	// 	ref: controllerRef,
-	// 	containerRef: containerRef,
-	// 	videoRef: videoRef,
-	// 	srcRef: srcRef,
-	// 	src: VideoTest,
-	// };
+	const controlProps = {
+		ref: controllerRef,
+		containerRef: containerRef,
+		videoRef: videoRef,
+		srcRef: srcRef,
+		src: VideoTest,
+	};
 
 	return (
 		<VideoPlayerLayout>
@@ -82,7 +82,7 @@ const VideoPlayer = () => {
 						<Video {...videoProps}>
 							<source ref={srcRef} src={VideoTest} type="video/mp4" />
 						</Video>
-						<VideoControls />
+						<VideoControls {...controlProps} />
 					</ContainerInnerDiv>
 				</VideoContainerDiv>
 			</VideoPlayerDiv>

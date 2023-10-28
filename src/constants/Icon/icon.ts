@@ -47,6 +47,7 @@ import FullScreenIcon from "@/assets/icon/VideoControl/ic-full-screen.svg?react"
 import NextIcon from "@/assets/icon/VideoControl/ic-next.svg?react";
 import PlayIcon from "@/assets/icon/VideoControl/ic-play.svg?react";
 import StopIcon from "@/assets/icon/VideoControl/ic-stop.svg?react";
+import VolumeMuteIcon from "@/assets/icon/VideoControl/ic-volume-mute.svg?react";
 import VolumeIcon from "@/assets/icon/VideoControl/ic-volume.svg?react";
 
 export {
@@ -91,4 +92,5 @@ export {
 	PlayIcon,
 	StopIcon,
 	VolumeIcon,
+	VolumeMuteIcon,
 };

@@ -95,3 +95,25 @@ export const TimeDiv = styled.div`
 export const RightDiv = styled(LeftDiv)`
 	justify-content: flex-end;
 `;
+
+export const SoundDiv = styled.div`
+	display: flex;
+	align-items: center;
+
+	& > button {
+		width: 46px;
+		height: 100%;
+		cursor: pointer;
+	}
+`;
+
+export const SoundControlDiv = styled.div`
+	z-index: 50;
+
+	& > input {
+		width: 100%;
+		outline: none;
+		border: none;
+		background: transparent;
+	}
+`;
