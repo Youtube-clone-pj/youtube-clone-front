@@ -12,6 +12,10 @@ import {
 	BsArrowCounterclockwise as SideShowIcon,
 	BsFlag as SideReportIcon,
 	BsBell as HeaderNotificationIcon,
+	BsSkipStart as StartIcon,
+	BsSkipEnd as EndIcon,
+	BsPause as StopIcon,
+	BsPlay as PlayIcon,
 } from "react-icons/bs";
 import { FaGamepad as SideGameIcon } from "react-icons/fa";
 import { FiRadio as SideLiveIcon } from "react-icons/fi";
@@ -28,6 +32,10 @@ import {
 	RiMusicLine as SideMusicIcon,
 	RiVideoAddLine as HeaderUploadIcon,
 } from "react-icons/ri";
+import {
+	TbPlayerTrackPrev as BackWardIcon,
+	TbPlayerTrackNext as ForwardIcon,
+} from "react-icons/tb";
 
 import HeaderMenuIcon from "@/assets/icon/ic-header-menu.svg?react";
 import HeaderLogoIcon from "@/assets/icon/ic-logo.svg?react";
@@ -45,8 +53,6 @@ import ShortsIcon from "@/assets/icon/ic-shorts.svg?react";
 import FullScreenCancelIcon from "@/assets/icon/VideoControl/ic-full-screen-cancel.svg?react";
 import FullScreenIcon from "@/assets/icon/VideoControl/ic-full-screen.svg?react";
 import NextIcon from "@/assets/icon/VideoControl/ic-next.svg?react";
-import PlayIcon from "@/assets/icon/VideoControl/ic-play.svg?react";
-import StopIcon from "@/assets/icon/VideoControl/ic-stop.svg?react";
 import VolumeMuteIcon from "@/assets/icon/VideoControl/ic-volume-mute.svg?react";
 import VolumeIcon from "@/assets/icon/VideoControl/ic-volume.svg?react";
 
@@ -93,4 +99,8 @@ export {
 	StopIcon,
 	VolumeIcon,
 	VolumeMuteIcon,
+	StartIcon,
+	BackWardIcon,
+	ForwardIcon,
+	EndIcon,
 };

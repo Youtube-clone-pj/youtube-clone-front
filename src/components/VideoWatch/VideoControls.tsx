@@ -8,13 +8,16 @@ import {
 } from "react";
 
 import {
-	NextIcon,
 	PlayIcon,
 	StopIcon,
 	VolumeIcon,
 	VolumeMuteIcon,
 	FullScreenIcon,
 	FullScreenCancelIcon,
+	StartIcon,
+	BackWardIcon,
+	ForwardIcon,
+	EndIcon,
 } from "@/constants/Icon/icon";
 
 import {
@@ -53,9 +56,10 @@ const VideoControls = forwardRef(
 		const [isSound, setIsSound] = useState(true);
 		const [isFull, setIsFull] = useState(false);
 		const [isPlaying, setIsPlaying] = useState(false);
+		const [progressTime, setProgressTime] = useState(0);
 
 		const containerCurrent = containerRef.current;
-		const videoCurrent = videoRef.current;
+		const videoCurrent = videoRef?.current;
 		// const srcCurrent = srcRef.current;
 		const totalTime = videoCurrent?.duration;
 
@@ -152,6 +156,12 @@ const VideoControls = forwardRef(
 			}
 		}, [isVolume]);
 
+		useEffect(() => {
+			if (totalTime) {
+				setProgressTime(videoCurrent.currentTime / totalTime);
+			}
+		}, [videoCurrent?.currentTime]);
+
 		useImperativeHandle(ref, () => ({
 			handleVideoClick,
 			handleKeyDown,
@@ -161,6 +171,8 @@ const VideoControls = forwardRef(
 			handleTimeUpdate,
 		}));
 
+		console.log(progressTime);
+
 		return (
 			<>
 				{showControl && (
@@ -169,16 +181,41 @@ const VideoControls = forwardRef(
 							<ProgressInnerDiv>
 								<ProgressStickDiv>
 									<StickList>
-										<StickPlayDiv />
+										<StickPlayDiv
+											style={{
+												left: "0px",
+												transform: `scaleX(${progressTime})`,
+											}}
+										/>
 									</StickList>
 								</ProgressStickDiv>
-								<ProgressCircleDiv>
+								<ProgressCircleDiv
+									style={{ transform: `translateX(${progressTime * 640}px)` }}
+								>
 									<ProgressCircle />
 								</ProgressCircleDiv>
 							</ProgressInnerDiv>
 						</ProgressbarDiv>
 						<ControlDiv>
 							<LeftDiv>
+								<button
+									onClick={() => {
+										if (videoCurrent) {
+											videoCurrent.currentTime = 0;
+										}
+									}}
+								>
+									<StartIcon size={36} color="#fff" />
+								</button>
+								<button
+									onClick={() => {
+										if (videoCurrent) {
+											videoCurrent.currentTime -= 5;
+										}
+									}}
+								>
+									<BackWardIcon size={30} color="#fff" />
+								</button>
 								<button
 									onClick={() => {
 										if (isPlaying) {
@@ -190,10 +227,29 @@ const VideoControls = forwardRef(
 										}
 									}}
 								>
-									{isPlaying ? <StopIcon /> : <PlayIcon />}
+									{isPlaying ? (
+										<StopIcon size={36} color="#fff" />
+									) : (
+										<PlayIcon size={36} color="#fff" />
+									)}
 								</button>
-								<button>
-									<NextIcon />
+								<button
+									onClick={() => {
+										if (videoCurrent) {
+											videoCurrent.currentTime += 5;
+										}
+									}}
+								>
+									<ForwardIcon size={30} color="#fff" />
+								</button>
+								<button
+									onClick={() => {
+										if (videoCurrent) {
+											videoCurrent.currentTime = videoCurrent.duration;
+										}
+									}}
+								>
+									<EndIcon size={36} color="#fff" />
 								</button>
 								<TimeDiv>{`${timeUpdate(time)} / ${timeUpdate(
 									totalTime,

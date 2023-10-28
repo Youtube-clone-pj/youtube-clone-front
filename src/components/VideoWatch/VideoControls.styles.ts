@@ -48,6 +48,12 @@ export const StickList = styled.div`
 
 export const StickPlayDiv = styled.div`
 	z-index: 34;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	transform-origin: 0 0;
 	background-color: #f00;
 `;
 
@@ -65,6 +71,7 @@ export const ProgressCircle = styled.div`
 	transition:
 		transform 0.1s cubic-bezier(0.4, 0, 1, 1),
 		-webkit-transform 0.1s cubic-bezier(0.4, 0, 1, 1);
+	background-color: #f00;
 `;
 
 export const ControlDiv = styled.div`
@@ -76,10 +83,15 @@ export const ControlDiv = styled.div`
 export const LeftDiv = styled.div`
 	display: flex;
 	justify-content: flex-start;
+	align-items: center;
 	flex: 1 1;
 
 	& > button {
-		width: 46px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 36px;
+		height: 36px;
 		cursor: pointer;
 	}
 `;
@@ -90,6 +102,7 @@ export const TimeDiv = styled.div`
 	color: #fff;
 	font-size: 15px;
 	z-index: 50;
+	margin-left: 10px;
 `;
 
 export const RightDiv = styled(LeftDiv)`
@@ -101,8 +114,8 @@ export const SoundDiv = styled.div`
 	align-items: center;
 
 	& > button {
-		width: 46px;
-		height: 100%;
+		width: 36px;
+		height: 36px;
 		cursor: pointer;
 	}
 `;
