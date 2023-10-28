@@ -2,7 +2,7 @@ import { useRef } from "react";
 
 import VideoTest from "@/assets/video/test2.mp4";
 
-// import VideoControls from "./VideoControls";
+import VideoControls from "./VideoControls";
 import {
 	VideoPlayerLayout,
 	VideoPlayerDiv,
@@ -29,7 +29,7 @@ const VideoPlayer = () => {
 	const containerProps = {
 		ref: containerRef,
 		tabIndex: 0,
-		onkeyDown: (e: React.KeyboardEvent) => {
+		onKeyDown: (e: React.KeyboardEvent) => {
 			if (controllerRef.current) {
 				controllerRef.current.handleKeyDown(e);
 			}
@@ -82,7 +82,7 @@ const VideoPlayer = () => {
 						<Video {...videoProps}>
 							<source ref={srcRef} src={VideoTest} type="video/mp4" />
 						</Video>
-						{/* <VideoControls {...controlProps} /> */}
+						<VideoControls />
 					</ContainerInnerDiv>
 				</VideoContainerDiv>
 			</VideoPlayerDiv>
