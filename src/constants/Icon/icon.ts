@@ -5,6 +5,7 @@ import {
 	AiFillTrophy as SideSportIcon,
 	AiOutlineQuestionCircle as SideCenterIcon,
 	AiOutlineInfoCircle as SideInfoIcon,
+	AiOutlineEllipsis as MoreIcon,
 } from "react-icons/ai";
 import {
 	BsPersonCircle as LoginPersonIcon,
@@ -109,4 +110,5 @@ export {
 	LikeIcon,
 	DisLikeIcon,
 	ShareIcon,
+	MoreIcon,
 };

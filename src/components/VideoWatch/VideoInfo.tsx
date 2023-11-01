@@ -1,4 +1,9 @@
-import { LikeIcon, DisLikeIcon } from "@/constants/Icon/icon";
+import {
+	LikeIcon,
+	DisLikeIcon,
+	ShareIcon,
+	MoreIcon,
+} from "@/constants/Icon/icon";
 
 import {
 	VideoInfoLayout,
@@ -9,9 +14,11 @@ import {
 	SubscribeButtonDiv,
 	ButtonDiv,
 	ButtonInnerDiv,
-	ButtonWrapperDiv,
+	LikeButtonDiv,
 	LikeButton,
 	DisLikeButton,
+	ShareButton,
+	MoreButton,
 } from "./VideoInfo.styles";
 
 const VideoInfo = () => {
@@ -39,15 +46,22 @@ const VideoInfo = () => {
 					</ProfileDiv>
 					<ButtonDiv>
 						<ButtonInnerDiv>
-							<ButtonWrapperDiv>
+							<LikeButtonDiv>
 								<LikeButton>
-									<LikeIcon size={24} color="#fff" />
+									<LikeIcon size={22} color="#fff" />
 									2.7천
 								</LikeButton>
 								<DisLikeButton>
-									<DisLikeIcon size={24} color="#fff" />
+									<DisLikeIcon size={22} color="#fff" />
 								</DisLikeButton>
-							</ButtonWrapperDiv>
+							</LikeButtonDiv>
+							<ShareButton>
+								<ShareIcon size={22} color="#fff" />
+								공유
+							</ShareButton>
+							<MoreButton>
+								<MoreIcon size={22} color="#fff" />
+							</MoreButton>
 						</ButtonInnerDiv>
 					</ButtonDiv>
 				</TopDiv>

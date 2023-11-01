@@ -103,9 +103,10 @@ export const ButtonDiv = styled.div`
 
 export const ButtonInnerDiv = styled.div`
 	display: flex;
+	gap: 10px;
 `;
 
-export const ButtonWrapperDiv = styled.div`
+export const LikeButtonDiv = styled.div`
 	display: flex;
 	align-items: center;
 `;
@@ -148,6 +149,37 @@ export const DisLikeButton = styled.button`
 	cursor: pointer;
 	display: flex;
 	align-items: center;
+	gap: 8px;
+	position: relative;
+`;
+
+export const ShareButton = styled.button`
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 36px;
+	border-radius: 18px;
+	height: 36px;
+	padding: 0 16px;
+	color: #f1f1f1;
+	background-color: rgb(255, 255, 255, 0.1);
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	position: relative;
+`;
+
+export const MoreButton = styled.button`
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	color: #f1f1f1;
+	background-color: rgb(255, 255, 255, 0.1);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	gap: 8px;
 	position: relative;
 `;
