@@ -31,7 +31,10 @@ import {
 	RiVideoLine as SideMyVideoIcon,
 	RiMusicLine as SideMusicIcon,
 	RiVideoAddLine as HeaderUploadIcon,
+	RiThumbUpLine as LikeIcon,
+	RiThumbDownLine as DisLikeIcon,
 } from "react-icons/ri";
+import { SlActionRedo as ShareIcon } from "react-icons/sl";
 import {
 	TbPlayerTrackPrev as BackWardIcon,
 	TbPlayerTrackNext as ForwardIcon,
@@ -103,4 +106,7 @@ export {
 	BackWardIcon,
 	ForwardIcon,
 	EndIcon,
+	LikeIcon,
+	DisLikeIcon,
+	ShareIcon,
 };

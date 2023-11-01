@@ -95,11 +95,59 @@ export const ButtonDiv = styled.div`
 	flex: 1 1 auto;
 	min-width: calc(50% - 6px);
 	align-items: center;
+	justify-content: flex-end;
 	margin-right: 0;
 	display: flex;
+	margin-top: 12px;
 `;
 
 export const ButtonInnerDiv = styled.div`
 	display: flex;
-	justify-content: flex-end;
+`;
+
+export const ButtonWrapperDiv = styled.div`
+	display: flex;
+	align-items: center;
+`;
+
+export const LikeButton = styled.button`
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 36px;
+	border-radius: 18px 0 0 18px;
+	height: 36px;
+	padding: 0 16px;
+	color: #f1f1f1;
+	background-color: rgb(255, 255, 255, 0.1);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	position: relative;
+
+	&::after {
+		content: "";
+		background: rgba(255, 255, 255, 0.2);
+		position: absolute;
+		top: 6px;
+		right: 0;
+		width: 1px;
+		height: 24px;
+	}
+`;
+
+export const DisLikeButton = styled.button`
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 36px;
+	border-radius: 0 18px 18px 0;
+	height: 36px;
+	padding: 0 16px;
+	color: #f1f1f1;
+	background-color: rgb(255, 255, 255, 0.1);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	position: relative;
 `;
