@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const VideoTitleLayout = styled.div`
 	color: #f1f1f1;
-	margin: 12px 0 24px;
 `;
 
 export const VideoTitleDiv = styled.div`

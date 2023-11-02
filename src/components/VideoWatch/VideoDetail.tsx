@@ -1,12 +1,16 @@
-import { VideoDetailLayout } from "./VideoDetail.styles.ts";
+import VideoComment from "./VideoComment/VideoComment.tsx";
+import { VideoDetailLayout, VideoInfoDiv } from "./VideoDetail.styles.ts";
 import VideoInfoCard from "./VideoInfoCard/VideoInfoCard.tsx";
 import VideoTitle from "./VideoTitle.tsx";
 
 const VideoDetail = () => {
 	return (
 		<VideoDetailLayout>
-			<VideoTitle />
-			<VideoInfoCard />
+			<VideoInfoDiv>
+				<VideoTitle />
+				<VideoInfoCard />
+			</VideoInfoDiv>
+			<VideoComment />
 		</VideoDetailLayout>
 	);
 };
