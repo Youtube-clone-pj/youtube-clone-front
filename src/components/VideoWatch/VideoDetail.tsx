@@ -1,10 +1,10 @@
 import { VideoDetailLayout } from "./VideoDetail.styles.ts";
-import VideoInfo from "./VideoInfo.tsx";
+import VideoTitle from "./VideoTitle.tsx";
 
 const VideoDetail = () => {
 	return (
 		<VideoDetailLayout>
-			<VideoInfo />
+			<VideoTitle />
 		</VideoDetailLayout>
 	);
 };

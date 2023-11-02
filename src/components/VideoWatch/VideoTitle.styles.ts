@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const VideoInfoLayout = styled.div`
+export const VideoTitleLayout = styled.div`
 	color: #f1f1f1;
 	margin: 12px 0 24px;
 `;
 
-export const VideoInfoDiv = styled.div`
+export const VideoTitleDiv = styled.div`
 	& > h1 {
 		word-break: break-word;
 		font-family: "YouTube Sans", "Roboto", sans-serif;
@@ -110,7 +110,7 @@ export const LikeButtonDiv = styled.div`
 	display: flex;
 `;
 
-export const VideoInfoButton = styled.button`
+export const VideoTitleButton = styled.button`
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 36px;
@@ -126,7 +126,7 @@ export const VideoInfoButton = styled.button`
 	position: relative;
 `;
 
-export const LikeButton = styled(VideoInfoButton)`
+export const LikeButton = styled(VideoTitleButton)`
 	&::after {
 		content: "";
 		background: rgba(255, 255, 255, 0.2);
@@ -138,11 +138,11 @@ export const LikeButton = styled(VideoInfoButton)`
 	}
 `;
 
-export const DisLikeButton = styled(VideoInfoButton)`
+export const DisLikeButton = styled(VideoTitleButton)`
 	border-radius: 0 18px 18px 0;
 `;
 
-export const ShareButton = styled(VideoInfoButton)`
+export const ShareButton = styled(VideoTitleButton)`
 	border-radius: 18px;
 `;
 

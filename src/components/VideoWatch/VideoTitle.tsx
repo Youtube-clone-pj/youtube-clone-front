@@ -6,8 +6,8 @@ import {
 } from "@/constants/Icon/icon";
 
 import {
-	VideoInfoLayout,
-	VideoInfoDiv,
+	VideoTitleLayout,
+	VideoTitleDiv,
 	TopDiv,
 	ProfileDiv,
 	ProfileInfoDiv,
@@ -19,12 +19,12 @@ import {
 	DisLikeButton,
 	ShareButton,
 	MoreButton,
-} from "./VideoInfo.styles";
+} from "./VideoTitle.styles";
 
-const VideoInfo = () => {
+const VideoTitle = () => {
 	return (
-		<VideoInfoLayout>
-			<VideoInfoDiv>
+		<VideoTitleLayout>
+			<VideoTitleDiv>
 				<h1>비디오 포스트 제목</h1>
 				<TopDiv>
 					<ProfileDiv>
@@ -65,9 +65,9 @@ const VideoInfo = () => {
 						</ButtonInnerDiv>
 					</ButtonDiv>
 				</TopDiv>
-			</VideoInfoDiv>
-		</VideoInfoLayout>
+			</VideoTitleDiv>
+		</VideoTitleLayout>
 	);
 };
 
-export default VideoInfo;
+export default VideoTitle;
