@@ -108,10 +108,9 @@ export const ButtonInnerDiv = styled.div`
 
 export const LikeButtonDiv = styled.div`
 	display: flex;
-	align-items: center;
 `;
 
-export const LikeButton = styled.button`
+export const VideoInfoButton = styled.button`
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 36px;
@@ -125,7 +124,9 @@ export const LikeButton = styled.button`
 	align-items: center;
 	gap: 8px;
 	position: relative;
+`;
 
+export const LikeButton = styled(VideoInfoButton)`
 	&::after {
 		content: "";
 		background: rgba(255, 255, 255, 0.2);
@@ -137,37 +138,12 @@ export const LikeButton = styled.button`
 	}
 `;
 
-export const DisLikeButton = styled.button`
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 36px;
+export const DisLikeButton = styled(VideoInfoButton)`
 	border-radius: 0 18px 18px 0;
-	height: 36px;
-	padding: 0 16px;
-	color: #f1f1f1;
-	background-color: rgb(255, 255, 255, 0.1);
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	position: relative;
 `;
 
-export const ShareButton = styled.button`
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 36px;
+export const ShareButton = styled(VideoInfoButton)`
 	border-radius: 18px;
-	height: 36px;
-	padding: 0 16px;
-	color: #f1f1f1;
-	background-color: rgb(255, 255, 255, 0.1);
-	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 8px;
-	position: relative;
 `;
 
 export const MoreButton = styled.button`
