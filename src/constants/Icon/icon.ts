@@ -41,6 +41,7 @@ import {
 	TbPlayerTrackNext as ForwardIcon,
 } from "react-icons/tb";
 
+import CommentSortIcon from "@/assets/icon/ic-comment-sort.svg?react";
 import HeaderMenuIcon from "@/assets/icon/ic-header-menu.svg?react";
 import HeaderLogoIcon from "@/assets/icon/ic-logo.svg?react";
 import NotificationIcon from "@/assets/icon/ic-notification.svg?react";
@@ -111,4 +112,5 @@ export {
 	DisLikeIcon,
 	ShareIcon,
 	MoreIcon,
+	CommentSortIcon,
 };
