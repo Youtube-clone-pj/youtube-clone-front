@@ -1,53 +1,55 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import { CommentSortIcon } from "@/constants/Icon/icon";
 
+import SortDropdown from "./SortDropdown/SortDropdown";
 import {
 	VideoCommentLayout,
 	TopDiv,
 	TitleDiv,
 	SortDiv,
-	DropdownDiv,
-	DropdownInnerDiv,
 	BottomDiv,
 } from "./VideoComment.styles";
 
 const VideoComment = () => {
-	const [sortOption, setSortOption] = useState("인기 댓글순");
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-	const handleDropdown = () => {
-		setIsDropdownOpen(!isDropdownOpen);
+	const dropdownRef = useRef<HTMLDivElement>(null);
+
+	const handleDropdown = (e: CustomEvent<MouseEvent>) => {
+		const target = e.target as HTMLDivElement;
+
+		if (!dropdownRef?.current?.contains(target)) {
+			setIsDropdownOpen(false);
+		}
 	};
+
+	useEffect(() => {
+		if (isDropdownOpen) {
+			window.addEventListener("click", handleDropdown as EventListener);
+
+			document.body.style.overflow = "hidden";
+		}
+
+		return () => {
+			window.removeEventListener("click", handleDropdown as EventListener);
+
+			document.body.style.overflow = "auto";
+		};
+	}, [isDropdownOpen]);
 
 	return (
 		<VideoCommentLayout>
 			<TopDiv>
 				<TitleDiv>
 					<h2>댓글 152개</h2>
-					<SortDiv onClick={handleDropdown}>
+					<SortDiv
+						ref={dropdownRef}
+						onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+					>
 						<CommentSortIcon />
 						<h3>정렬 기준</h3>
-						{isDropdownOpen && (
-							<DropdownDiv>
-								<DropdownInnerDiv>
-									<ul>
-										<li
-											onClick={() => setSortOption("인기 댓글순")}
-											className={sortOption === "인기 댓글순" ? "active" : ""}
-										>
-											<a href="">인기 댓글순</a>
-										</li>
-										<li
-											onClick={() => setSortOption("최신순")}
-											className={sortOption === "최신순" ? "active" : ""}
-										>
-											<a href="">최신순</a>
-										</li>
-									</ul>
-								</DropdownInnerDiv>
-							</DropdownDiv>
-						)}
+						{isDropdownOpen && <SortDropdown />}
 					</SortDiv>
 				</TitleDiv>
 			</TopDiv>
