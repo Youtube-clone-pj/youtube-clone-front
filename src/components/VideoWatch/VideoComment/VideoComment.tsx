@@ -34,7 +34,7 @@ const VideoComment = () => {
 		return () => {
 			window.removeEventListener("click", handleDropdown as EventListener);
 
-			document.body.style.overflow = "auto";
+			document.body.style.overflow = "";
 		};
 	}, [isDropdownOpen]);
 
