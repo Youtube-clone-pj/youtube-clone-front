@@ -2,7 +2,7 @@ import { useRef } from "react";
 
 import VideoTest from "@/assets/video/test2.mp4";
 
-import VideoControls from "./VideoControls";
+import VideoControls from "./VideoControls/VideoControls";
 import {
 	VideoPlayerLayout,
 	VideoPlayerDiv,

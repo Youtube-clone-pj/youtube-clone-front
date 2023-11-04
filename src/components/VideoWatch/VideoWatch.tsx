@@ -1,24 +1,13 @@
-import VideoDetail from "./VideoDetail";
-import VideoPlayer from "./VideoPlayer";
-import {
-	VideoWatchLayout,
-	VideoWatchDiv,
-	PrimaryDiv,
-	PrimaryInnerDiv,
-	SecondaryDiv,
-} from "./VideoWatch.styles";
+import VideoPrimary from "./VideoPrimary/VideoPrimary";
+import VideoSecondary from "./VideoSecondary/VideoSecondary";
+import { VideoWatchLayout, VideoWatchDiv } from "./VideoWatch.styles";
 
 const VideoWatch = () => {
 	return (
 		<VideoWatchLayout>
 			<VideoWatchDiv>
-				<PrimaryDiv>
-					<PrimaryInnerDiv>
-						<VideoPlayer />
-						<VideoDetail />
-					</PrimaryInnerDiv>
-				</PrimaryDiv>
-				<SecondaryDiv />
+				<VideoPrimary />
+				<VideoSecondary />
 			</VideoWatchDiv>
 		</VideoWatchLayout>
 	);
