@@ -96,7 +96,47 @@ export const TextDiv = styled.div<{ $ismore: boolean }>`
 	}
 `;
 
-export const ContentButtonDiv = styled.div``;
+export const ContentButtonDiv = styled.div`
+	display: flex;
+	align-items: center;
+
+	& > button {
+		width: 36px;
+		height: 36px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		border-radius: 50%;
+
+		&:hover {
+			background-color: ${({ theme: { colors } }) => colors.white_alpha_20};
+		}
+	}
+
+	& > span {
+		color: ${({ theme: { colors } }) => colors.gray};
+		font-family: Roboto, Arial, sans-serif;
+		font-size: 0.8rem;
+		font-weight: 500;
+		line-height: 1.4rem;
+		text-transform: uppercase;
+		margin-right: 8px;
+	}
+
+	& > .reply {
+		color: ${({ theme: { colors } }) => colors.white_primary};
+		font-size: 12px;
+		height: 32px;
+		padding: 0 6px;
+		border-radius: 16px;
+		margin-left: 2px;
+
+		/* &:hover {
+			background-color: ${({ theme: { colors } }) => colors.white_alpha_20};
+		} */
+	}
+`;
 
 export const OptionButtonDiv = styled.div``;
 

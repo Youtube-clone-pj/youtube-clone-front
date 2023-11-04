@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { LikeIcon, DisLikeIcon } from "@/constants/Icon/icon";
+
 import {
 	VideoCommentContentLayout,
 	VideoCommentDiv,
@@ -13,9 +15,11 @@ import {
 	OptionButtonDiv,
 	ReplyDiv,
 } from "./VideoCommentContent.styles";
+import VideoCommentInput from "../VideoCommentHeader/VideoCommentInput/VideoCommentInput";
 
 const VideoCommentContent = () => {
 	const [isMore, setIsMore] = useState(false);
+	const [isReplyClick, setIsReplyClick] = useState(false);
 
 	const handleCommentMore = () => {
 		setIsMore(!isMore);
@@ -96,7 +100,22 @@ const VideoCommentContent = () => {
 								자세히 보기
 							</button>
 						</CommentTextDiv>
-						<ContentButtonDiv></ContentButtonDiv>
+						<ContentButtonDiv>
+							<button>
+								<LikeIcon size={22} color="#fff" />
+							</button>
+							<span>140</span>
+							<button>
+								<DisLikeIcon size={22} color="#fff" />
+							</button>
+							<button
+								className="reply"
+								onClick={() => setIsReplyClick(!isReplyClick)}
+							>
+								답글
+							</button>
+						</ContentButtonDiv>
+						{isReplyClick && <VideoCommentInput />}
 					</ContentDiv>
 					<OptionButtonDiv></OptionButtonDiv>
 				</CommentDiv>
