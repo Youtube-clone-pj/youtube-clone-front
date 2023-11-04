@@ -6,6 +6,8 @@ import {
 	AiOutlineQuestionCircle as SideCenterIcon,
 	AiOutlineInfoCircle as SideInfoIcon,
 	AiOutlineEllipsis as MoreIcon,
+	AiFillCaretUp as ReplyLessIcon,
+	AiFillCaretDown as ReplyMoreIcon,
 } from "react-icons/ai";
 import {
 	BsPersonCircle as LoginPersonIcon,
@@ -113,4 +115,6 @@ export {
 	ShareIcon,
 	MoreIcon,
 	CommentSortIcon,
+	ReplyLessIcon,
+	ReplyMoreIcon,
 };
