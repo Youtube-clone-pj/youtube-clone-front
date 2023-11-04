@@ -32,7 +32,7 @@ export const ImgDiv = styled.div`
 export const OverlayDiv = styled.div``;
 
 export const ProgressFullDiv = styled.div`
-	background-color: #717171;
+	background-color: ${({ theme: { colors } }) => colors.gray_primary};
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -43,14 +43,14 @@ export const ProgressFullDiv = styled.div`
 
 export const ProgressLiveDiv = styled.div`
 	width: 10%;
-	background-color: #ff4e45;
+	background-color: ${({ theme: { colors } }) => colors.red_primary};
 	height: 100%;
 `;
 
 export const TimeStampDiv = styled.div`
 	border-radius: 4px;
-	background-color: rgba(0, 0, 0, 0.8);
-	color: #fff;
+	background-color: ${({ theme: { colors } }) => colors.black_alpha_80};
+	color: ${({ theme: { colors } }) => colors.white};
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -86,7 +86,7 @@ export const DetailInfoDiv = styled.div`
 
 export const ProfileDiv = styled.div`
 	display: inline-block;
-	background-color: rgba(255, 255, 255, 0.1);
+	background-color: ${({ theme: { colors } }) => colors.white_alpha_10};
 	opacity: 1;
 	overflow: hidden;
 	width: 36px;
@@ -104,12 +104,12 @@ export const TextDiv = styled.div`
 	padding-right: 24px;
 
 	& > h3 {
-		color: #f1f1f1;
+		color: ${({ theme: { colors } }) => colors.white_primary};
 		margin: 12px 0 4px;
 
 		& > a {
 			display: -webkit-box;
-			color: #f1f1f1;
+			color: ${({ theme: { colors } }) => colors.white_primary};
 			font-family: Roboto, Arial, sans-serif;
 			font-size: 1rem;
 			font-weight: 500;
@@ -125,7 +125,7 @@ export const TextDiv = styled.div`
 
 	& > h4 {
 		font-size: 0.8rem;
-		color: #aaa;
+		color: ${({ theme: { colors } }) => colors.gray};
 
 		& > span:not(:first-of-type)::before {
 			content: "•";
@@ -138,7 +138,7 @@ export const TextDiv = styled.div`
 	}
 
 	& > h4:first-of-type:hover {
-		color: #f1f1f1;
+		color: ${({ theme: { colors } }) => colors.white_primary};
 	}
 `;
 

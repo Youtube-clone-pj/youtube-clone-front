@@ -37,7 +37,7 @@ export const ProgressStickDiv = styled.div`
 
 export const StickList = styled.div`
 	z-index: 39;
-	background: rgba(255, 255, 255, 0.2);
+	background: ${({ theme: { colors } }) => colors.white_alpha_20};
 	height: 100%;
 	transform: scaleY(0.6);
 	transition:
@@ -54,7 +54,7 @@ export const StickPlayDiv = styled.div`
 	width: 100%;
 	height: 100%;
 	transform-origin: 0 0;
-	background-color: #f00;
+	background-color: ${({ theme: { colors } }) => colors.red};
 `;
 
 export const ProgressCircleDiv = styled.div`
@@ -71,7 +71,7 @@ export const ProgressCircle = styled.div`
 	transition:
 		transform 0.1s cubic-bezier(0.4, 0, 1, 1),
 		-webkit-transform 0.1s cubic-bezier(0.4, 0, 1, 1);
-	background-color: #f00;
+	background-color: ${({ theme: { colors } }) => colors.red};
 `;
 
 export const ControlDiv = styled.div`
@@ -99,7 +99,7 @@ export const LeftDiv = styled.div`
 export const TimeDiv = styled.div`
 	display: flex;
 	align-items: center;
-	color: #fff;
+	color: ${({ theme: { colors } }) => colors.white};
 	font-size: 15px;
 	z-index: 50;
 	margin-left: 10px;

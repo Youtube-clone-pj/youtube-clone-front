@@ -11,7 +11,7 @@ export const TitleDiv = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 32px;
-	color: #f1f1f1;
+	color: ${({ theme: { colors } }) => colors.white_primary};
 	font-family: Roboto, Arial, sans-serif;
 	cursor: pointer;
 

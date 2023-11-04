@@ -4,7 +4,7 @@ export const TagbarLayout = styled.div`
 	width: 100%;
 	height: 56px;
 	position: fixed;
-	background-color: #0f0f0f;
+	background-color: ${({ theme: { colors } }) => colors.black_primary};
 	z-index: 99;
 	display: flex;
 	align-items: center;
@@ -23,14 +23,15 @@ export const TagItemDiv = styled.button`
 	padding: 0 12px;
 	height: 32px;
 	border-radius: 8px;
-	background-color: ${({ disabled }) =>
-		disabled ? "#f1f1f1" : "rgba(255,255,255,0.1)"};
-	color: ${({ disabled }) => (disabled ? "#0f0f0f" : "#f1f1f1")};
+	background-color: ${({ disabled, theme: { colors } }) =>
+		disabled ? colors.white_primary : colors.white_alpha_10};
+	color: ${({ disabled, theme: { colors } }) =>
+		disabled ? colors.black_primary : colors.white_primary};
 	min-width: 12px;
 	font-size: 12px;
 	cursor: pointer;
 
 	&:hover {
-		background-color: rgba(255, 255, 255, 0.2);
+		background-color: ${({ theme: { colors } }) => colors.white_alpha_20};
 	}
 `;

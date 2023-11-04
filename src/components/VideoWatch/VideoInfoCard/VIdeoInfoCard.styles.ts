@@ -6,8 +6,8 @@ export const VideoInfoCardLayout = styled.div`
 `;
 
 export const VideoInfoCardDiv = styled.div`
-	background-color: rgba(255, 255, 255, 0.1);
-	color: #f1f1f1;
+	background-color: ${({ theme: { colors } }) => colors.white_alpha_10};
+	color: ${({ theme: { colors } }) => colors.white_primary};
 	border-radius: 12px;
 	cursor: pointer;
 	flex: 1 1;
@@ -20,7 +20,7 @@ export const VideoInfoCardDiv = styled.div`
 	min-width: max(381px, 50% - 12px);
 
 	&:hover {
-		background-color: rgba(255, 255, 255, 0.2);
+		background-color: ${({ theme: { colors } }) => colors.white_alpha_20};
 	}
 `;
 
@@ -64,7 +64,7 @@ export const BottomInnerDiv = styled.div`
 		);
 
 	& > span > a {
-		color: #3ea6ff;
+		color: ${({ theme: { colors } }) => colors.blue_primary};
 	}
 `;
 

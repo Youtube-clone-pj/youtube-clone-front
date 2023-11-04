@@ -36,15 +36,15 @@ export const DetailInfoDiv = styled.div`
 	position: relative;
 
 	& > h3 {
-		color: #f1f1f1;
+		color: ${({ theme: { colors } }) => colors.white_primary};
 		padding: 12px 24px 0 0;
 
 		& > a {
 			display: -webkit-box;
-			color: #f1f1f1;
+			color: ${({ theme: { colors } }) => colors.white_primary};
 			font-family: Roboto, Arial, sans-serif;
 			font-size: 1rem;
-			font-weight: 500;
+			font-weight: ${({ theme: { font } }) => font.weight.medium};
 			line-height: 1.6rem;
 			-webkit-line-clamp: 2;
 			-webkit-box-orient: vertical;
@@ -56,11 +56,10 @@ export const DetailInfoDiv = styled.div`
 	}
 
 	& > h4 {
-		color: #aaa;
+		color: ${({ theme: { colors } }) => colors.gray};
 		font-family: "Roboto", "Arial", sans-serif;
 		font-size: 14px;
 		line-height: 20px;
-		font-weight: 400;
 		overflow: hidden;
 		-webkit-line-clamp: 2;
 		display: -webkit-box;

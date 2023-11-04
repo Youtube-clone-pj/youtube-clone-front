@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const VideoTitleLayout = styled.div`
-	color: #f1f1f1;
+	color: ${({ theme: { colors } }) => colors.white_primary};
 `;
 
 export const VideoTitleDiv = styled.div`
@@ -58,7 +58,7 @@ export const ProfileInfoDiv = styled.div`
 	& > a > h3 {
 		font-size: 1.1rem;
 		font-weight: 500;
-		color: #f1f1f1;
+		color: ${({ theme: { colors } }) => colors.white_primary};
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
@@ -71,7 +71,7 @@ export const ProfileInfoDiv = styled.div`
 		max-height: 1.8rem;
 		text-overflow: ellipsis;
 		white-space: nowrap;
-		color: #aaa;
+		color: ${({ theme: { colors } }) => colors.gray};
 		margin-right: 4px;
 	}
 `;
@@ -84,8 +84,8 @@ export const SubscribeButtonDiv = styled.div`
 		border-radius: 18px;
 		height: 36px;
 		padding: 0 16px;
-		color: #0f0f0f;
-		background-color: #f1f1f1;
+		color: ${({ theme: { colors } }) => colors.black_primary};
+		background-color: ${({ theme: { colors } }) => colors.white_primary};
 		cursor: pointer;
 	}
 `;
@@ -116,8 +116,8 @@ export const VideoTitleButton = styled.button`
 	border-radius: 18px 0 0 18px;
 	height: 36px;
 	padding: 0 16px;
-	color: #f1f1f1;
-	background-color: rgb(255, 255, 255, 0.1);
+	color: ${({ theme: { colors } }) => colors.white_primary};
+	background-color: ${({ theme: { colors } }) => colors.white_alpha_10};
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -128,7 +128,7 @@ export const VideoTitleButton = styled.button`
 export const LikeButton = styled(VideoTitleButton)`
 	&::after {
 		content: "";
-		background: rgba(255, 255, 255, 0.2);
+		background-color: ${({ theme: { colors } }) => colors.white_alpha_20};
 		position: absolute;
 		top: 6px;
 		right: 0;
@@ -149,8 +149,8 @@ export const MoreButton = styled.button`
 	width: 36px;
 	height: 36px;
 	border-radius: 50%;
-	color: #f1f1f1;
-	background-color: rgb(255, 255, 255, 0.1);
+	color: ${({ theme: { colors } }) => colors.white_primary};
+	background-color: ${({ theme: { colors } }) => colors.white_alpha_10};
 	cursor: pointer;
 	display: flex;
 	align-items: center;

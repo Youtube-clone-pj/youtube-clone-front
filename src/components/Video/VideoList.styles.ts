@@ -4,7 +4,7 @@ export const VideoListLayout = styled.div`
 	width: 100%;
 	padding-top: 24px;
 	margin-top: 56px;
-	background-color: #0f0f0f;
+	background-color: ${({ theme: { colors } }) => colors.black_primary};
 `;
 
 export const VidoeListRowDiv = styled.div``;

@@ -36,15 +36,16 @@ export const CommentInputDiv = styled.div`
 		border: none;
 		outline: none;
 		height: 24px;
-		border-bottom: 1px solid #717171;
-		color: #f1f1f1;
+		border-bottom: 1px solid ${({ theme: { colors } }) => colors.gray_primary};
+		color: ${({ theme: { colors } }) => colors.white_primary};
 
 		&:focus {
-			border-bottom: 1px solid #f1f1f1;
+			border-bottom: 1px solid
+				${({ theme: { colors } }) => colors.white_primary};
 		}
 
 		&::placeholder {
-			color: rgb(128, 128, 128);
+			color: ${({ theme: { colors } }) => colors.gray_secondary};
 			font-size: 14px;
 		}
 	}
@@ -72,22 +73,22 @@ export const ButtonInnerDiv = styled.div`
 
 	& > .cancel {
 		background-color: transparent;
-		color: #f1f1f1;
+		color: ${({ theme: { colors } }) => colors.white_primary};
 		cursor: pointer;
 
 		&:hover {
-			background-color: rgba(255, 255, 255, 0.2);
+			background-color: ${({ theme: { colors } }) => colors.white_alpha_20};
 		}
 	}
 
 	& > .comment {
-		background-color: rgba(255, 255, 255, 0.1);
-		color: #717171;
+		background-color: ${({ theme: { colors } }) => colors.white_alpha_10};
+		color: ${({ theme: { colors } }) => colors.gray_primary};
 		cursor: default;
 	}
 
 	& > .active {
-		background-color: #3ea6ff;
-		color: #0f0f0f;
+		background-color: ${({ theme: { colors } }) => colors.blue_primary};
+		color: ${({ theme: { colors } }) => colors.black_primary};
 	}
 `;

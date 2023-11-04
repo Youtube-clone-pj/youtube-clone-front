@@ -16,8 +16,8 @@ export const DropdownDiv = styled.div`
 	position: relative;
 
 	& > ul {
-		background-color: #212121;
-		color: #f1f1f1;
+		background-color: ${({ theme: { colors } }) => colors.black_03};
+		color: ${({ theme: { colors } }) => colors.white_primary};
 		border-radius: 12px;
 		overflow: hidden;
 		padding: 8px 0;
@@ -36,7 +36,7 @@ export const DropdownDiv = styled.div`
 		}
 
 		& > .active {
-			background-color: rgba(255, 255, 255, 0.1);
+			background-color: ${({ theme: { colors } }) => colors.white_alpha_10};
 		}
 	}
 `;

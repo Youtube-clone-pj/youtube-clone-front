@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const VideoWatchLayout = styled.div`
-	background-color: #0f0f0f;
+	background-color: ${({ theme: { colors } }) => colors.black_primary};
 	z-index: 100;
 	width: 100%;
 `;

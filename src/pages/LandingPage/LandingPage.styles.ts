@@ -5,5 +5,5 @@ export const ContentDiv = styled.div`
 	flex-direction: column;
 	padding-top: 60px;
 	padding-left: 256px;
-	background-color: #0f0f0f;
+	background-color: ${({ theme: { colors } }) => colors.black_primary};
 `;
