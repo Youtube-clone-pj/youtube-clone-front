@@ -7,6 +7,7 @@ import {
 	ProgressLiveDiv,
 	TimeStampDiv,
 	InfoDiv,
+	InfoMetaDiv,
 } from "./VideoSectionItem.styles";
 
 const VideoSectionItem = () => {
@@ -29,7 +30,26 @@ const VideoSectionItem = () => {
 						</OverlayDiv>
 					</a>
 				</ThumbnailDiv>
-				<InfoDiv></InfoDiv>
+				<InfoDiv>
+					<a href="#">
+						<h3>
+							<span>
+								[광고없는] 🎧인기 국내힙합 노래 모음 (2022) / 신나는 국힙
+								플레이리스트 🎧 춤추면서들을수있는 신나는 힙합믹스🎧 2022 Korean
+								Best Hip-Hop Songs
+							</span>
+						</h3>
+						<InfoMetaDiv>
+							<h4>
+								<a href="#">user-김준식</a>
+							</h4>
+							<h5>
+								<span>조회수 48만회</span>
+								<span>10개월 전</span>
+							</h5>
+						</InfoMetaDiv>
+					</a>
+				</InfoDiv>
 			</VideoSectionItemDiv>
 		</VideoSectionItemLayout>
 	);

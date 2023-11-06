@@ -13,6 +13,7 @@ export const VideoSectionItemDiv = styled.div`
 export const ThumbnailDiv = styled.div`
 	width: 168px;
 	position: relative;
+	flex: none;
 
 	& > a {
 		height: 94px;
@@ -65,4 +66,50 @@ export const TimeStampDiv = styled.div`
 	}
 `;
 
-export const InfoDiv = styled.div``;
+export const InfoDiv = styled.div`
+	padding-right: 24px;
+	width: 100%;
+
+	& > a {
+		cursor: pointer;
+
+		& > h3 {
+			color: ${({ theme: { colors } }) => colors.white_primary};
+
+			& > span {
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				display: -webkit-box;
+				font-family: Roboto, Arial, sans-serif;
+				font-size: 0.9rem;
+				font-weight: 500;
+				line-height: 1.4rem;
+				margin: 0 0 4px;
+				max-height: 4rem;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: normal;
+			}
+		}
+	}
+`;
+
+export const InfoMetaDiv = styled.div`
+	display: flex;
+	flex-direction: column;
+	color: ${({ theme: { colors } }) => colors.gray};
+
+	& > h4 {
+		font-size: 0.8rem;
+		line-height: 1.4rem;
+	}
+
+	& > h5 {
+		font-size: 0.8rem;
+
+		& > span:last-of-type::before {
+			content: "•";
+			margin: 0 4px;
+		}
+	}
+`;
