@@ -70,11 +70,12 @@ export const InfoDiv = styled.div`
 	padding-right: 24px;
 	width: 100%;
 
-	& > a {
-		cursor: pointer;
+	& > h3 {
+		color: ${({ theme: { colors } }) => colors.white_primary};
 
-		& > h3 {
-			color: ${({ theme: { colors } }) => colors.white_primary};
+		& > a {
+			cursor: pointer;
+			display: block;
 
 			& > span {
 				-webkit-line-clamp: 2;
@@ -111,5 +112,16 @@ export const InfoMetaDiv = styled.div`
 			content: "•";
 			margin: 0 4px;
 		}
+	}
+`;
+
+export const OptionButtonDiv = styled.div`
+	& > button {
+		width: 24px;
+		height: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
 	}
 `;
