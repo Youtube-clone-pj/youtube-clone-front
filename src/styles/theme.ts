@@ -1,19 +1,28 @@
-const darkTheme = {
+import { DefaultTheme } from "styled-components";
+
+const theme: DefaultTheme = {
 	colors: {
-		primary: "#6C55FE",
+		black_primary: "#0f0f0f",
+		black_secondary: "#282828",
+		black_03: "#212121",
+		black_04: "#272727", // 393939
+		black_05: "#303030", // 48 48 48
+		white_primary: "#f1f1f1",
+		gray_primary: "#717171",
+		gray_secondary: "#808080", // 128 128 128
+		red_primary: "#ff4e45",
+		blue_primary: "#3ea6ff",
+		gray: "#aaa",
+		white: "#fff",
+		black: "#000",
+		red: "#f00",
+		black_alpha_10: "rgba(0,0,0,0.1)",
+		black_alpha_80: "rgba(0,0,0,0.8)",
+		white_alpha_08: "rgba(255,255,255,0.08)",
+		white_alpha_10: "rgba(255,255,255,0.1)",
+		white_alpha_20: "rgba(255,255,255,0.2)",
 	},
-	spacing: {
-		padding: {
-			small: 10,
-			medium: 20,
-			large: 30,
-		},
-		borderRadius: {
-			small: 5,
-			default: 10,
-		},
-	},
-	typography: {
+	font: {
 		weight: {
 			regular: "400",
 			medium: "500",
@@ -22,18 +31,7 @@ const darkTheme = {
 			extrabold: "800",
 			black: "900",
 		},
-		size: {
-			s1: "12px",
-			s2: "14px",
-			s3: "16px",
-			m1: "20px",
-			m2: "24px",
-			m3: "28px",
-			l1: "32px",
-			l2: "40px",
-			l3: "48px",
-		},
 	},
 };
 
-export default darkTheme;
+export default theme;

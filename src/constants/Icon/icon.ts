@@ -5,6 +5,9 @@ import {
 	AiFillTrophy as SideSportIcon,
 	AiOutlineQuestionCircle as SideCenterIcon,
 	AiOutlineInfoCircle as SideInfoIcon,
+	AiOutlineEllipsis as MoreIcon,
+	AiFillCaretUp as ReplyLessIcon,
+	AiFillCaretDown as ReplyMoreIcon,
 } from "react-icons/ai";
 import {
 	BsPersonCircle as LoginPersonIcon,
@@ -12,6 +15,10 @@ import {
 	BsArrowCounterclockwise as SideShowIcon,
 	BsFlag as SideReportIcon,
 	BsBell as HeaderNotificationIcon,
+	BsSkipStart as StartIcon,
+	BsSkipEnd as EndIcon,
+	BsPause as StopIcon,
+	BsPlay as PlayIcon,
 } from "react-icons/bs";
 import { FaGamepad as SideGameIcon } from "react-icons/fa";
 import { FiRadio as SideLiveIcon } from "react-icons/fi";
@@ -22,13 +29,23 @@ import {
 	MdOutlineVideoLibrary as SideLibraryIcon,
 	MdOutlineLocalFireDepartment as SideHotIcon,
 	MdMovieCreation as SideMovieIcon,
+	MdArrowBackIosNew as LeftArrowIcon,
+	MdArrowForwardIos as RightArrowIcon,
 } from "react-icons/md";
 import {
 	RiVideoLine as SideMyVideoIcon,
 	RiMusicLine as SideMusicIcon,
 	RiVideoAddLine as HeaderUploadIcon,
+	RiThumbUpLine as LikeIcon,
+	RiThumbDownLine as DisLikeIcon,
 } from "react-icons/ri";
+import { SlActionRedo as ShareIcon } from "react-icons/sl";
+import {
+	TbPlayerTrackPrev as BackWardIcon,
+	TbPlayerTrackNext as ForwardIcon,
+} from "react-icons/tb";
 
+import CommentSortIcon from "@/assets/icon/ic-comment-sort.svg?react";
 import HeaderMenuIcon from "@/assets/icon/ic-header-menu.svg?react";
 import HeaderLogoIcon from "@/assets/icon/ic-logo.svg?react";
 import NotificationIcon from "@/assets/icon/ic-notification.svg?react";
@@ -42,6 +59,11 @@ import ProfileStudioIcon from "@/assets/icon/ic-profile-studio.svg?react";
 import ProfileThemeIcon from "@/assets/icon/ic-profile-theme.svg?react";
 import SearchIcon from "@/assets/icon/ic-search.svg?react";
 import ShortsIcon from "@/assets/icon/ic-shorts.svg?react";
+import FullScreenCancelIcon from "@/assets/icon/VideoControl/ic-full-screen-cancel.svg?react";
+import FullScreenIcon from "@/assets/icon/VideoControl/ic-full-screen.svg?react";
+import NextIcon from "@/assets/icon/VideoControl/ic-next.svg?react";
+import VolumeMuteIcon from "@/assets/icon/VideoControl/ic-volume-mute.svg?react";
+import VolumeIcon from "@/assets/icon/VideoControl/ic-volume.svg?react";
 
 export {
 	HeaderMenuIcon,
@@ -79,4 +101,24 @@ export {
 	ProfileSettingIcon,
 	ProfileThemeIcon,
 	NotificationIcon,
+	FullScreenCancelIcon,
+	FullScreenIcon,
+	NextIcon,
+	PlayIcon,
+	StopIcon,
+	VolumeIcon,
+	VolumeMuteIcon,
+	StartIcon,
+	BackWardIcon,
+	ForwardIcon,
+	EndIcon,
+	LikeIcon,
+	DisLikeIcon,
+	ShareIcon,
+	MoreIcon,
+	CommentSortIcon,
+	ReplyLessIcon,
+	ReplyMoreIcon,
+	LeftArrowIcon,
+	RightArrowIcon,
 };

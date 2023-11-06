@@ -4,10 +4,10 @@ import { ThemeProvider } from "styled-components";
 
 import App from "./App.tsx";
 import GlobalStyles from "./styles/GlobalStyles.ts";
-import darkTheme from "./styles/theme.ts";
+import theme from "./styles/theme.ts";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-	<ThemeProvider theme={darkTheme}>
+	<ThemeProvider theme={theme}>
 		<GlobalStyles />
 		<App />
 	</ThemeProvider>,

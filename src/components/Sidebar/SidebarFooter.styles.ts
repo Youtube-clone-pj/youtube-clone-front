@@ -21,12 +21,12 @@ export const GuideLinkDiv = styled.div`
 
 export const GuideTextDiv = styled.div`
 	padding: 16px 24px;
-	color: #717171;
+	color: ${({ theme: { colors } }) => colors.gray_primary};
 	font-family: "Roboto", "Arial", sans-serif;
 	font-size: 0.78rem;
 	line-height: 1.3rem;
 
 	& > a {
-		color: #3ea6ff;
+		color: ${({ theme: { colors } }) => colors.blue_primary};
 	}
 `;

@@ -6,7 +6,7 @@ export const SidebarListLayout = styled.div`
 
 export const ContentUl = styled.ul`
 	padding: 12px 0;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid ${({ theme: { colors } }) => colors.white_alpha_10};
 
 	&:first-of-type {
 		padding-top: 0;
@@ -19,7 +19,7 @@ export const ContentUl = styled.ul`
 		border-radius: 10px;
 
 		&:hover {
-			background: rgba(255, 255, 255, 0.1);
+			background: ${({ theme: { colors } }) => colors.white_alpha_10};
 		}
 	}
 `;
@@ -30,9 +30,8 @@ export const ItemDiv = styled.div`
 	gap: 24px;
 
 	& > h2 {
-		color: #f1f1f1;
+		color: ${({ theme: { colors } }) => colors.white_primary};
 		white-space: nowrap;
 		text-overflow: ellipsis;
-		font-weight: 400;
 	}
 `;

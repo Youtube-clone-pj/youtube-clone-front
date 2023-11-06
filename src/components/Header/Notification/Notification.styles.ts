@@ -10,9 +10,10 @@ export const NotificationLayout = styled.div`
 	overflow: auto;
 	width: 480px;
 	height: 640px;
-	background-color: #282828;
+	background-color: ${({ theme: { colors } }) => colors.black_secondary};
 	border-radius: 12px;
-	box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 4px 32px 0px
+		${({ theme: { colors } }) => colors.black_alpha_10};
 	display: flex;
 	flex-direction: column;
 	font-family: "Roboto", "Arial", sans-serif;
@@ -22,13 +23,13 @@ export const TopDiv = styled.div`
 	display: flex;
 	align-items: center;
 	min-height: 48px;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-	color: #f1f1f1;
+	border-bottom: 1px solid ${({ theme: { colors } }) => colors.white_alpha_20};
+	color: ${({ theme: { colors } }) => colors.white_primary};
 	background-color: #282828;
+	background-color: ${({ theme: { colors } }) => colors.black_secondary};
 	padding: 0 8px 0 16px;
 
 	& > h2 {
-		font-size: 16px;
 		line-height: 22px;
 		flex: 1;
 		flex-basis: 1e-9px;
@@ -67,14 +68,14 @@ export const BottomInnerDiv = styled.div`
 
 export const BottomTextDiv = styled.div`
 	width: 280px;
-	color: #aaa;
+	color: ${({ theme: { colors } }) => colors.gray};
 	text-align: center;
 
 	& > h3 {
 		margin-bottom: 8px;
-		font-size: 16px;
 		line-height: 22px;
 		font-weight: 500;
+		font-weight: ${({ theme: { font } }) => font.weight.medium};
 	}
 
 	& > h4 {

@@ -9,9 +9,10 @@ export const ProfileDropdownLayout = styled.div`
 	max-height: 750px;
 	overflow: auto;
 	width: 300px;
-	background-color: #282828;
+	background-color: ${({ theme: { colors } }) => colors.black_secondary};
 	border-radius: 12px;
-	box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 4px 32px 0px
+		${({ theme: { colors } }) => colors.black_alpha_10};
 	display: flex;
 	flex-direction: column;
 `;
@@ -20,7 +21,7 @@ export const TopDiv = styled.div`
 	display: flex;
 	padding: 16px;
 	position: relative;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid ${({ theme: { colors } }) => colors.white_alpha_20};
 	gap: 16px;
 
 	& > img {
@@ -38,7 +39,7 @@ export const TextDiv = styled.div`
 	& > h3 {
 		font-size: 16px;
 		line-height: 22px;
-		color: #f1f1f1;
+		color: ${({ theme: { colors } }) => colors.white_primary};
 		text-overflow: ellipsis;
 		overflow: hidden;
 		white-space: nowrap;
@@ -51,7 +52,7 @@ export const TextDiv = styled.div`
 		text-overflow: ellipsis;
 		overflow: hidden;
 		white-space: pre;
-		color: #3ea6ff;
+		color: ${({ theme: { colors } }) => colors.blue_primary};
 	}
 `;
 
@@ -60,7 +61,7 @@ export const BottomDiv = styled.div`
 	font-family: "Roboto", "Arial", sans-serif;
 
 	& > ul {
-		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		border-bottom: 1px solid ${({ theme: { colors } }) => colors.white_alpha_20};
 		padding: 8px 0;
 
 		& > a > li {
@@ -70,13 +71,12 @@ export const BottomDiv = styled.div`
 			cursor: pointer;
 			display: flex;
 			align-items: center;
-			font-size: 16px;
 			line-height: 24px;
 			min-height: 40px;
 			gap: 16px;
 
 			&:hover {
-				background-color: rgba(255, 255, 255, 0.1);
+				background-color: ${({ theme: { colors } }) => colors.white_alpha_10};
 			}
 
 			& > h3 {

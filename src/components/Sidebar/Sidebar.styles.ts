@@ -6,6 +6,7 @@ export const SidebarLayout = styled.aside`
 	height: 100%;
 	overflow-y: auto;
 	background-color: #0f0f0f;
+	background-color: ${({ theme: { colors } }) => colors.black_primary};
 	z-index: 99;
 
 	&::-webkit-scrollbar {

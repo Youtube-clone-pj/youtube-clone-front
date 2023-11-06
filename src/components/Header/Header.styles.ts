@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeaderLayout = styled.header`
 	width: 100%;
 	position: fixed;
-	background-color: #0f0f0f;
+	background-color: ${({ theme: { colors } }) => colors.black_primary};
 	z-index: 100;
 `;
 
@@ -39,7 +39,7 @@ export const ButtonDiv = styled.div`
 
 		&:hover {
 			border-radius: 50%;
-			background-color: rgb(39, 39, 39);
+			background-color: ${({ theme: { colors } }) => colors.black_04};
 		}
 
 		& > svg {
@@ -62,8 +62,8 @@ export const LogoDiv = styled.div`
 
 	& > h2 {
 		font-size: 24px;
-		color: #fff;
-		font-weight: 700;
+		color: ${({ theme: { colors } }) => colors.white};
+		font-weight: ${({ theme: { font } }) => font.weight.bold};
 		letter-spacing: -0.05em;
 	}
 `;
@@ -80,8 +80,8 @@ export const RightInnerDiv = styled.div`
 
 export const LoginDiv = styled.div`
 	padding: 0 15px;
-	color: #3ea6ff;
-	border: 1px solid rgba(255, 255, 255, 0.2);
+	color: ${({ theme: { colors } }) => colors.blue_primary};
+	border: 1px solid ${({ theme: { colors } }) => colors.white_alpha_20};
 	border-radius: 18px;
 	display: flex;
 	align-items: center;

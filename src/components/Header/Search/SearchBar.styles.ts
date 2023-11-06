@@ -21,16 +21,16 @@ export const SearchDiv = styled.div`
 			border: none;
 			height: 30px;
 			width: 500px;
-			color: #f1f1f1;
-			background-color: #0f0f0f;
+			color: ${({ theme: { colors } }) => colors.white_primary};
+			background-color: ${({ theme: { colors } }) => colors.black_primary};
 			outline: none;
 			margin-left: 20px;
 		}
 	}
 
 	& > button {
-		border: 1px solid #303030;
-		background-color: rgba(255, 255, 255, 0.08);
+		border: 1px solid ${({ theme: { colors } }) => colors.black_05};
+		background-color: ${({ theme: { colors } }) => colors.white_alpha_08};
 		border-radius: 0 40px 40px 0;
 		border-left: none;
 		cursor: pointer;

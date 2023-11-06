@@ -40,7 +40,7 @@ const Header = () => {
 		const target = e.target as HTMLImageElement;
 
 		if (!profileRef?.current?.contains(target)) {
-			setIsDropdownOpen(!isDropdownOpen);
+			setIsDropdownOpen(false);
 		}
 	};
 
@@ -48,7 +48,7 @@ const Header = () => {
 		const targets = e.target as HTMLButtonElement;
 
 		if (!notificationRef?.current?.contains(targets)) {
-			setIsNotificationOpen(!isNotificationOpen);
+			setIsNotificationOpen(false);
 		}
 	};
 
@@ -58,7 +58,7 @@ const Header = () => {
 		}
 
 		return () => {
-			window.addEventListener("click", handleDropdown as EventListener);
+			window.removeEventListener("click", handleDropdown as EventListener);
 		};
 	}, [isDropdownOpen]);
 
@@ -68,7 +68,7 @@ const Header = () => {
 		}
 
 		return () => {
-			window.addEventListener("click", handleNotification as EventListener);
+			window.removeEventListener("click", handleNotification as EventListener);
 		};
 	}, [isNotificationOpen]);
 
@@ -119,7 +119,6 @@ const Header = () => {
 										onClick={() => setIsDropdownOpen(!isDropdownOpen)}
 									/>
 								</button>
-
 								{isDropdownOpen && <ProfileDropdown />}
 							</ProfileDiv>
 						</RightInnerDiv>

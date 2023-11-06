@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ShortsListLayout = styled.div`
 	width: 100%;
-	background-color: #0f0f0f;
+	background-color: ${({ theme: { colors } }) => colors.black_primary};
 `;
 
 export const ShortsListRowDiv = styled.div`
@@ -13,7 +13,7 @@ export const RowInnerDiv = styled.div`
 	margin-bottom: 48px;
 	padding-bottom: 17px;
 	position: relative;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid ${({ theme: { colors } }) => colors.white_alpha_20};
 `;
 
 export const TitleDiv = styled.div`
@@ -23,7 +23,7 @@ export const TitleDiv = styled.div`
 		display: flex;
 		align-items: center;
 		gap: 8px;
-		color: #f1f1f1;
+		color: ${({ theme: { colors } }) => colors.white_primary};
 		font-family: "Roboto", "Arial", sans-serif;
 		font-size: 20px;
 		line-height: 28px;
