@@ -17,15 +17,12 @@ export const ThumbnailDiv = styled.div`
 
 	& > a {
 		height: 193px;
-	}
-`;
 
-export const ImgDiv = styled.div`
-	& > img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		border-radius: 12px;
+		& > img {
+			width: 100%;
+			height: 100%;
+			border-radius: 12px;
+		}
 	}
 `;
 

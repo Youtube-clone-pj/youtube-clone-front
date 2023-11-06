@@ -6,7 +6,6 @@ import {
 	VideoCardLayout,
 	CardInnerDiv,
 	ThumbnailDiv,
-	ImgDiv,
 	OverlayDiv,
 	ProgressFullDiv,
 	ProgressLiveDiv,
@@ -31,9 +30,7 @@ const VideoCard = (cardData: videoCardType) => {
 			<CardInnerDiv>
 				<ThumbnailDiv>
 					<a href={`/watch/${cardData.postId}`}>
-						<ImgDiv>
-							<img src={cardData.postVideoThumbnail} alt="img" />
-						</ImgDiv>
+						<img src={cardData.postVideoThumbnail} alt="img" />
 						<OverlayDiv>
 							<ProgressFullDiv>
 								<ProgressLiveDiv />
