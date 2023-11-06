@@ -125,7 +125,7 @@ const VideoControls = forwardRef(
 
 		const handleMouseMove = (e: React.MouseEvent) => {
 			setShowControl(true);
-			setHideCursor(false);
+			hideCursor && setHideCursor(false);
 			setCoords({ x: e.screenX });
 		};
 
@@ -144,7 +144,7 @@ const VideoControls = forwardRef(
 		useEffect(() => {
 			const timeOut = setTimeout(() => {
 				setShowControl(false);
-				setHideCursor(true);
+				hideCursor || setHideCursor(true);
 			}, 3000);
 
 			return () => clearTimeout(timeOut);
