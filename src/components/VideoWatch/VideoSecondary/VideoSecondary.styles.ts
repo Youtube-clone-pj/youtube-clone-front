@@ -5,6 +5,7 @@ export const VideoSecondaryLayout = styled.div`
 	padding: 24px 24px 0 0;
 	position: relative;
 	width: 402px;
+	background-color: ${({ theme: { colors } }) => colors.black_primary};
 `;
 
 export const VideoSecondaryDiv = styled.div`

@@ -29,6 +29,8 @@ import {
 	MdOutlineVideoLibrary as SideLibraryIcon,
 	MdOutlineLocalFireDepartment as SideHotIcon,
 	MdMovieCreation as SideMovieIcon,
+	MdArrowBackIosNew as LeftArrowIcon,
+	MdArrowForwardIos as RightArrowIcon,
 } from "react-icons/md";
 import {
 	RiVideoLine as SideMyVideoIcon,
@@ -117,4 +119,6 @@ export {
 	CommentSortIcon,
 	ReplyLessIcon,
 	ReplyMoreIcon,
+	LeftArrowIcon,
+	RightArrowIcon,
 };

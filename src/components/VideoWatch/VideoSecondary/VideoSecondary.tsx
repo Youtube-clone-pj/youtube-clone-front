@@ -2,11 +2,14 @@ import {
 	VideoSecondaryLayout,
 	VideoSecondaryDiv,
 } from "./VideoSecondary.styles";
+import VideoTagbar from "./VideoTagbar/VideoTagbar";
 
 const VideoSecondary = () => {
 	return (
 		<VideoSecondaryLayout>
-			<VideoSecondaryDiv></VideoSecondaryDiv>
+			<VideoSecondaryDiv>
+				<VideoTagbar />
+			</VideoSecondaryDiv>
 		</VideoSecondaryLayout>
 	);
 };
