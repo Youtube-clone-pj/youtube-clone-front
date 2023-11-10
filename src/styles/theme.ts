@@ -21,6 +21,7 @@ const theme: DefaultTheme = {
 		white_alpha_08: "rgba(255,255,255,0.08)",
 		white_alpha_10: "rgba(255,255,255,0.1)",
 		white_alpha_20: "rgba(255,255,255,0.2)",
+		transparent: "transparent",
 	},
 	font: {
 		weight: {
