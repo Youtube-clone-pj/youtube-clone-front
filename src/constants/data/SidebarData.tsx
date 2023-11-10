@@ -2,7 +2,7 @@ import {
 	SideHomeIcon,
 	SideShortsIcon,
 	SideSubIcon,
-	SideLibraryIcon,
+	SideMyChannelIcon,
 	SideShowIcon,
 	SideMyVideoIcon,
 	SideAfterShowIcon,
@@ -42,8 +42,8 @@ const ListHomeData = [
 
 const ListVideoData = [
 	{
-		icon: <SideLibraryIcon size={SIZE} color={WHITE} />,
-		title: "보관함",
+		icon: <SideMyChannelIcon size={SIZE} color={WHITE} />,
+		title: "내 채널",
 		link: "/",
 	},
 	{

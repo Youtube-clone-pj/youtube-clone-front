@@ -19,6 +19,7 @@ import {
 	BsSkipEnd as EndIcon,
 	BsPause as StopIcon,
 	BsPlay as PlayIcon,
+	BsPersonSquare as SideMyChannelIcon,
 } from "react-icons/bs";
 import { FaGamepad as SideGameIcon } from "react-icons/fa";
 import { FiRadio as SideLiveIcon } from "react-icons/fi";
@@ -26,7 +27,6 @@ import { FiSettings as SideSettingIcon } from "react-icons/fi";
 import { ImPlay2 as SideShortsIcon } from "react-icons/im";
 import {
 	MdOutlineMoreVert as HeaderMoreIcon,
-	MdOutlineVideoLibrary as SideLibraryIcon,
 	MdOutlineLocalFireDepartment as SideHotIcon,
 	MdMovieCreation as SideMovieIcon,
 	MdArrowBackIosNew as LeftArrowIcon,
@@ -76,7 +76,7 @@ export {
 	SideHomeIcon,
 	SideShortsIcon,
 	SideSubIcon,
-	SideLibraryIcon,
+	SideMyChannelIcon,
 	SideShowIcon,
 	SideMyVideoIcon,
 	SideAfterShowIcon,
