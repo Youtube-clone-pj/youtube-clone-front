@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HistoryShortsLayout = styled.div`
+export const HistoryShortsCardLayout = styled.div`
 	padding-right: 4px;
 	display: inline-block;
 	white-space: normal;
@@ -8,7 +8,7 @@ export const HistoryShortsLayout = styled.div`
 	width: 210px;
 `;
 
-export const HistoryShortsInnerDiv = styled.div`
+export const HistoryShortsCardInnerDiv = styled.div`
 	display: flex;
 	flex-direction: column;
 `;

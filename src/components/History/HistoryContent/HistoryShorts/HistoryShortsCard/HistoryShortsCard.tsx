@@ -4,15 +4,15 @@ import { shortsCardType } from "@/components/Shorts/ShortsList";
 import { HeaderMoreIcon } from "@/constants/Icon/icon";
 
 import {
-	HistoryShortsLayout,
-	HistoryShortsInnerDiv,
+	HistoryShortsCardLayout,
+	HistoryShortsCardInnerDiv,
 	ThumbnailDiv,
 	ImgDiv,
 	DetailInfoDiv,
 	MenuDiv,
-} from "./HistoryShorts.styles";
+} from "./HistoryShortsCard.styles";
 
-const HistoryShorts = (cardData: shortsCardType) => {
+const HistoryShortsCard = (cardData: shortsCardType) => {
 	const [optionMenuHoverIndex, setOptionMenuHoverIndex] = useState<
 		number | null
 	>(null);
@@ -21,8 +21,8 @@ const HistoryShorts = (cardData: shortsCardType) => {
 		setOptionMenuHoverIndex((prev) => (prev === num ? null : num));
 
 	return (
-		<HistoryShortsLayout>
-			<HistoryShortsInnerDiv>
+		<HistoryShortsCardLayout>
+			<HistoryShortsCardInnerDiv>
 				<ThumbnailDiv>
 					<a href={`/shorts/${cardData.shortsId}`}>
 						<ImgDiv>
@@ -46,9 +46,9 @@ const HistoryShorts = (cardData: shortsCardType) => {
 						<HeaderMoreIcon size={24} color="#fff" />
 					</MenuDiv>
 				</DetailInfoDiv>
-			</HistoryShortsInnerDiv>
-		</HistoryShortsLayout>
+			</HistoryShortsCardInnerDiv>
+		</HistoryShortsCardLayout>
 	);
 };
 
-export default HistoryShorts;
+export default HistoryShortsCard;
