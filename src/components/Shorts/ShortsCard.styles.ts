@@ -17,6 +17,7 @@ export const ThumbnailDiv = styled.div`
 	position: relative;
 
 	& > a {
+		display: block;
 		height: 398px;
 	}
 `;
@@ -24,8 +25,8 @@ export const ThumbnailDiv = styled.div`
 export const ImgDiv = styled.div`
 	& > img {
 		width: 100%;
-		height: 100%;
-		object-fit: contain;
+		height: 398px;
+		object-fit: cover;
 		border-radius: 12px;
 	}
 `;
