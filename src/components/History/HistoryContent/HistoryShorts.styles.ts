@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
-export const ShortsCardLayout = styled.div`
-	margin-bottom: 20px;
-	width: calc(100% / 6 - 16px);
+export const HistoryShortsLayout = styled.div`
+	padding-right: 4px;
+	display: inline-block;
+	white-space: normal;
 	position: relative;
-	margin: 0 8px;
+	width: 210px;
 `;
 
-export const CardInnerDiv = styled.div`
+export const HistoryShortsInnerDiv = styled.div`
 	display: flex;
 	flex-direction: column;
 `;
@@ -17,7 +18,7 @@ export const ThumbnailDiv = styled.div`
 	position: relative;
 
 	& > a {
-		height: 398px;
+		height: 302px;
 	}
 `;
 
@@ -36,15 +37,15 @@ export const DetailInfoDiv = styled.div`
 
 	& > h3 {
 		color: ${({ theme: { colors } }) => colors.white_primary};
-		padding: 12px 24px 0 0;
+		padding: 8px 24px 0 0;
 
 		& > a {
 			display: -webkit-box;
 			color: ${({ theme: { colors } }) => colors.white_primary};
 			font-family: "Roboto", "Arial", sans-serif;
-			font-size: 16px;
+			font-size: 14px;
 			font-weight: ${({ theme: { font } }) => font.weight.medium};
-			line-height: 22px;
+			line-height: 20px;
 			-webkit-line-clamp: 2;
 			-webkit-box-orient: vertical;
 			overflow: hidden;
@@ -57,8 +58,8 @@ export const DetailInfoDiv = styled.div`
 	& > h4 {
 		color: ${({ theme: { colors } }) => colors.gray};
 		font-family: "Roboto", "Arial", sans-serif;
-		font-size: 14px;
-		line-height: 20px;
+		font-size: 12px;
+		line-height: 18px;
 	}
 `;
 
@@ -67,8 +68,8 @@ export const MenuDiv = styled.div<{ $showmenu: boolean }>`
 	align-items: center;
 	justify-content: center;
 	position: absolute;
-	top: 4px;
-	right: -12px;
+	top: 0;
+	right: 0;
 	width: 40px;
 	height: 40px;
 `;
