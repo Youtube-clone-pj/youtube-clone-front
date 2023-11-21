@@ -1,4 +1,5 @@
 import ChannelPage from "./ChannelPage/ChannelPage";
+import HistoryPage from "./HistoryPage/HistoryPage";
 import LandingPage from "./LandingPage/LandingPage";
 import Root from "./Root";
 import ShortsPage from "./ShortsPage";
@@ -12,4 +13,5 @@ export {
 	StudioPage,
 	Root,
 	ChannelPage,
+	HistoryPage,
 };

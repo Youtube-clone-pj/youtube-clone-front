@@ -7,6 +7,7 @@ import {
 	StudioPage,
 	Root,
 	ChannelPage,
+	HistoryPage,
 } from "./pages";
 
 const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
 			{
 				path: "/channel",
 				element: <ChannelPage />,
+			},
+			{
+				path: "/feed/history",
+				element: <HistoryPage />,
 			},
 		],
 	},
