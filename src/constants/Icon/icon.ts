@@ -8,6 +8,7 @@ import {
 	AiOutlineEllipsis as MoreIcon,
 	AiFillCaretUp as ReplyLessIcon,
 	AiFillCaretDown as ReplyMoreIcon,
+	AiOutlineClose as CloseIcon,
 } from "react-icons/ai";
 import {
 	BsPersonCircle as LoginPersonIcon,
@@ -121,4 +122,5 @@ export {
 	ReplyMoreIcon,
 	LeftArrowIcon,
 	RightArrowIcon,
+	CloseIcon,
 };

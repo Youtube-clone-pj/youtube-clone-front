@@ -16,6 +16,7 @@ export const ThumbnailDiv = styled.div`
 	flex: none;
 
 	& > a {
+		display: block;
 		height: 94px;
 
 		& > img {

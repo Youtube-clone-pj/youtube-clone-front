@@ -4,6 +4,7 @@ import {
 	ContentDiv,
 } from "./HistoryContent.styles";
 import HistoryShorts from "./HistoryShorts/HistoryShorts";
+import HistoryVideo from "./HistoryVideo/HistoryVideo";
 
 const HistoryContent = () => {
 	return (
@@ -11,6 +12,7 @@ const HistoryContent = () => {
 			<TitleDiv>오늘</TitleDiv>
 			<ContentDiv>
 				<HistoryShorts />
+				<HistoryVideo />
 			</ContentDiv>
 		</HistoryContentLayout>
 	);
