@@ -80,13 +80,16 @@ const HistoryShorts = () => {
 	};
 
 	const handleNextButton = () => {
+		setCurrentWidth((nextWidth) => nextWidth + 856);
+	};
+
+	useEffect(() => {
 		const maxWidth = childRef?.current?.clientWidth;
 		const width = parentRef?.current?.clientWidth;
 		if (maxWidth && width) {
 			setWidthGap(maxWidth - width);
-			setCurrentWidth((nextWidth) => nextWidth + 856);
 		}
-	};
+	});
 
 	useEffect(() => {
 		if (widthGap && currentWidth > widthGap) {
