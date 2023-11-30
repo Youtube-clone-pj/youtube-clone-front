@@ -34,6 +34,8 @@ export const TitleInnerDiv = styled.div`
 export const ContentDiv = styled.div`
 	max-width: 1284px;
 	width: 1284px;
+	display: flex;
+	flex: none;
 `;
 
 export const ContentInnerDiv = styled.div`
@@ -41,4 +43,5 @@ export const ContentInnerDiv = styled.div`
 	flex: 1;
 	flex-basis: 1e-9px;
 	max-width: 100%;
+	min-width: 0;
 `;

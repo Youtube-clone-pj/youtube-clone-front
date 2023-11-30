@@ -6,6 +6,7 @@ import {
 	ContentInnerDiv,
 } from "./History.styles";
 import HistoryContent from "./HistoryContent/HistoryContent";
+import HistorySide from "./HistorySide/HistorySide";
 
 const History = () => {
 	return (
@@ -19,6 +20,7 @@ const History = () => {
 				<ContentInnerDiv>
 					<HistoryContent />
 				</ContentInnerDiv>
+				<HistorySide />
 			</ContentDiv>
 		</HistoryLayout>
 	);

@@ -48,6 +48,8 @@ import {
 
 import CommentSortIcon from "@/assets/icon/ic-comment-sort.svg?react";
 import HeaderMenuIcon from "@/assets/icon/ic-header-menu.svg?react";
+import HistoryDeleteIcon from "@/assets/icon/ic-history-delete.svg?react";
+import HistoryStopIcon from "@/assets/icon/ic-history-stop.svg?react";
 import HeaderLogoIcon from "@/assets/icon/ic-logo.svg?react";
 import NotificationIcon from "@/assets/icon/ic-notification.svg?react";
 import ProfileCenterIcon from "@/assets/icon/ic-profile-center.svg?react";
@@ -123,4 +125,6 @@ export {
 	LeftArrowIcon,
 	RightArrowIcon,
 	CloseIcon,
+	HistoryDeleteIcon,
+	HistoryStopIcon,
 };
