@@ -13,6 +13,10 @@ const HistoryContent = () => {
 			<ContentDiv>
 				<HistoryShorts />
 				<HistoryVideo />
+				<HistoryVideo />
+				<HistoryVideo />
+				<HistoryVideo />
+				<HistoryVideo />
 			</ContentDiv>
 		</HistoryContentLayout>
 	);
