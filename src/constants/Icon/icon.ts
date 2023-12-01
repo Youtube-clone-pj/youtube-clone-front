@@ -20,6 +20,7 @@ import {
 	BsSkipEnd as EndIcon,
 	BsPause as StopIcon,
 	BsPlay as PlayIcon,
+	BsPlayFill as PlayFillIcon,
 	BsPersonSquare as SideMyChannelIcon,
 } from "react-icons/bs";
 import { FaGamepad as SideGameIcon } from "react-icons/fa";
@@ -62,6 +63,7 @@ import ProfileStudioIcon from "@/assets/icon/ic-profile-studio.svg?react";
 import ProfileThemeIcon from "@/assets/icon/ic-profile-theme.svg?react";
 import SearchIcon from "@/assets/icon/ic-search.svg?react";
 import ShortsIcon from "@/assets/icon/ic-shorts.svg?react";
+import ShuffleIcon from "@/assets/icon/ic-shuffle.svg?react";
 import FullScreenCancelIcon from "@/assets/icon/VideoControl/ic-full-screen-cancel.svg?react";
 import FullScreenIcon from "@/assets/icon/VideoControl/ic-full-screen.svg?react";
 import NextIcon from "@/assets/icon/VideoControl/ic-next.svg?react";
@@ -127,4 +129,6 @@ export {
 	CloseIcon,
 	HistoryDeleteIcon,
 	HistoryStopIcon,
+	PlayFillIcon,
+	ShuffleIcon,
 };
