@@ -5,24 +5,21 @@ import { SORT_OPTION_TYPE } from "@/constants/data/SortOption";
 import { DropdownLayout, DropdownDiv } from "./SortDropdown.styles";
 
 const SortDropdown = () => {
-	const [sortOption, setSortOption] = useState(SORT_OPTION_TYPE.BEST);
+	const [sortOption, setSortOption] = useState("인기 댓글순");
 
 	return (
 		<DropdownLayout>
 			<DropdownDiv>
 				<ul>
-					<li
-						onClick={() => setSortOption(SORT_OPTION_TYPE.BEST)}
-						className={sortOption === SORT_OPTION_TYPE.BEST ? "active" : ""}
-					>
-						<a href="">{SORT_OPTION_TYPE.BEST}</a>
-					</li>
-					<li
-						onClick={() => setSortOption(SORT_OPTION_TYPE.LATEST)}
-						className={sortOption === SORT_OPTION_TYPE.LATEST ? "active" : ""}
-					>
-						<a href="">{SORT_OPTION_TYPE.LATEST}</a>
-					</li>
+					{SORT_OPTION_TYPE.map((list) => (
+						<li
+							onClick={() => setSortOption(list.data)}
+							className={sortOption === list.data ? "active" : ""}
+							key={list.data}
+						>
+							<a href="">{list.data}</a>
+						</li>
+					))}
 				</ul>
 			</DropdownDiv>
 		</DropdownLayout>

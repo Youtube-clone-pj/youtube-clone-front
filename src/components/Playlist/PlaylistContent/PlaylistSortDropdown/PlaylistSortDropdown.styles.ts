@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
-export const DropdownLayout = styled.div`
+export const PlaylistSortDropdownLayout = styled.div`
 	position: absolute;
-	left: 0;
+	right: 0;
 	top: 40px;
 	z-index: 50;
 `;
 
 export const DropdownDiv = styled.div`
-	width: 98px;
-	height: 122px;
+	width: 156px;
+	height: 266px;
 	border-radius: 8px;
 
 	& > ul {
