@@ -11,18 +11,24 @@ export const HistoryVideoDiv = styled.div`
 `;
 
 export const ThumbnailDiv = styled.div`
-	flex: none;
-	position: relative;
 	width: 246px;
+	height: 138px;
+	position: relative;
 
 	& > a {
 		display: block;
-		height: 138px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		border-radius: 8px;
+		height: 100%;
+		overflow: hidden;
 
 		& > img {
 			width: 100%;
 			height: 100%;
-			border-radius: 8px;
 		}
 	}
 `;

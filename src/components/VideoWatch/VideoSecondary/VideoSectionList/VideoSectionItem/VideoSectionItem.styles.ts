@@ -12,17 +12,24 @@ export const VideoSectionItemDiv = styled.div`
 
 export const ThumbnailDiv = styled.div`
 	width: 168px;
+	height: 94px;
 	position: relative;
 	flex: none;
 
 	& > a {
 		display: block;
-		height: 94px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		border-radius: 8px;
+		height: 100%;
+		overflow: hidden;
 
 		& > img {
 			width: 100%;
 			height: 100%;
-			border-radius: 8px;
 		}
 	}
 `;

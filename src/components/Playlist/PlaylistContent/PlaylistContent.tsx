@@ -4,6 +4,7 @@ import {
 	InnerDiv,
 } from "./PlaylistContent.styles";
 import PlaylistSort from "./PlaylistSort/PlaylistSort";
+import PlaylistVideoContent from "./PlaylistVideoContent/PlaylistVideoContent";
 
 const PlaylistContent = () => {
 	return (
@@ -11,6 +12,7 @@ const PlaylistContent = () => {
 			<PlaylistContentDiv>
 				<InnerDiv>
 					<PlaylistSort />
+					<PlaylistVideoContent />
 				</InnerDiv>
 			</PlaylistContentDiv>
 		</PlaylistContentLayout>
