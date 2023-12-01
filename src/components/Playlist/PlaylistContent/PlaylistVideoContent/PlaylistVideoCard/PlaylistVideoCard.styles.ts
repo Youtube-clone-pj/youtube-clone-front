@@ -4,6 +4,10 @@ export const PlaylistVideoCardLayout = styled.div`
 	display: flex;
 	align-items: center;
 	border-radius: 12px;
+
+	&:hover {
+		background-color: ${({ theme: { colors } }) => colors.white_alpha_10};
+	}
 `;
 
 export const IndexDiv = styled.div`
@@ -31,6 +35,8 @@ export const ContentDiv = styled.div`
 	display: flex;
 	flex: 1;
 	flex-basis: 1e-9px;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 `;
 
 export const ContentInnerDiv = styled.div`
@@ -91,15 +97,76 @@ export const TimeStampDiv = styled.div`
 	bottom: 0;
 	padding: 3px 4px;
 	margin: 4px;
-	line-height: 1.2rem;
+	line-height: 12px;
 	letter-spacing: 0.5px;
 	height: 12px;
-	font-size: 0.8rem;
+	font-size: 12px;
 	display: inline-flex;
 	align-items: center;
 
 	& > span {
-		max-height: 1.2rem;
+		max-height: 12px;
 		overflow: hidden;
+	}
+`;
+
+export const InfoDiv = styled.div`
+	min-width: 0;
+	flex: 1;
+	flex-basis: 1e-9px;
+
+	& > h3 {
+		display: block;
+		& > a {
+			color: ${({ theme: { colors } }) => colors.white_primary};
+			margin-bottom: 8px;
+			font-family: "Roboto", "Arial", sans-serif;
+			font-size: 16px;
+			line-height: 22px;
+			font-weight: ${({ theme: { font } }) => font.weight.medium};
+			overflow: hidden;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			text-overflow: ellipsis;
+			white-space: normal;
+			display: -webkit-box;
+			min-width: 0;
+		}
+	}
+`;
+
+export const InfoMetaDiv = styled.div`
+	font-family: "Roboto", "Arial", sans-serif;
+	display: flex;
+	max-width: 100%;
+	align-items: center;
+
+	& > h4 {
+		font-size: 12px;
+		line-height: 18px;
+		color: ${({ theme: { colors } }) => colors.gray};
+
+		&::after {
+			content: "•";
+			margin: 0 4px;
+		}
+
+		&:last-of-type::after {
+			content: none;
+		}
+	}
+`;
+
+export const MenuDiv = styled.div<{ $showmenu: boolean }>`
+	display: ${({ $showmenu }) => ($showmenu ? "flex" : "none")};
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	min-width: 40px;
+
+	& > svg {
+		width: 24px;
+		height: 24px;
 	}
 `;

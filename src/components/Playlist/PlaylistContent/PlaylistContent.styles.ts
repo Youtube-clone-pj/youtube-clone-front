@@ -5,6 +5,9 @@ export const PlaylistContentLayout = styled.div`
 	width: 100%;
 	min-width: 0;
 	min-height: calc(100vh - 56px);
+	display: flex;
+	flex: none;
+	box-sizing: border-box;
 `;
 
 export const PlaylistContentDiv = styled.div`
