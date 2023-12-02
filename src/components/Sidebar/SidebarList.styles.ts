@@ -19,7 +19,7 @@ export const ContentLi = styled.li<{ $active: boolean }>`
 	display: flex;
 	border-radius: 10px;
 	background: ${({ $active, theme: { colors } }) =>
-		$active ? colors.white_alpha_10 : "transparent"};
+		$active ? colors.white_alpha_10 : colors.transparent};
 
 	&:hover {
 		background: ${({ theme: { colors } }) => colors.white_alpha_10};
