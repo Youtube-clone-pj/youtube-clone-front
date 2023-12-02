@@ -11,16 +11,18 @@ export const ContentUl = styled.ul`
 	&:first-of-type {
 		padding-top: 0;
 	}
+`;
 
-	& > a > li {
-		padding: 0 12px;
-		height: 48px;
-		display: flex;
-		border-radius: 10px;
+export const ContentLi = styled.li<{ $active: boolean }>`
+	padding: 0 12px;
+	height: 48px;
+	display: flex;
+	border-radius: 10px;
+	background: ${({ $active, theme: { colors } }) =>
+		$active ? colors.white_alpha_10 : "transparent"};
 
-		&:hover {
-			background: ${({ theme: { colors } }) => colors.white_alpha_10};
-		}
+	&:hover {
+		background: ${({ theme: { colors } }) => colors.white_alpha_10};
 	}
 `;
 

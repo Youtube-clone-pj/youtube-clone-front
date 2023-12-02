@@ -31,7 +31,7 @@ const ListHomeData = [
 	{
 		icon: <SideShortsIcon size={SIZE} color={WHITE} />,
 		title: "Shorts",
-		link: "/shorts",
+		link: "/shorts/1",
 	},
 	{
 		icon: <SideSubIcon size={SIZE} color={WHITE} />,
