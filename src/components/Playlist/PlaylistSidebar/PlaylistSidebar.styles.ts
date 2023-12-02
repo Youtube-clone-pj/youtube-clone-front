@@ -183,6 +183,7 @@ export const InfoMetaDiv = styled.div`
 export const InfoMoreButtonDiv = styled.div`
 	display: flex;
 	align-items: center;
+	position: relative;
 
 	& > button {
 		width: 36px;
@@ -194,13 +195,13 @@ export const InfoMoreButtonDiv = styled.div`
 		border-radius: 50%;
 		background-color: ${({ theme: { colors } }) => colors.white_alpha_10};
 
+		&:hover {
+			background-color: ${({ theme: { colors } }) => colors.white_alpha_20};
+		}
+
 		& > svg {
 			width: 20px;
 			height: 20px;
-		}
-
-		&:hover {
-			background-color: ${({ theme: { colors } }) => colors.white_alpha_20};
 		}
 	}
 `;

@@ -1,9 +1,12 @@
+import { useState, useEffect, useRef } from "react";
+
 import {
 	PlayFillIcon,
 	HeaderMoreIcon,
 	ShuffleIcon,
 } from "@/constants/Icon/icon";
 
+import MoreButtonDropdown from "./MoreButtonDropdown/MoreButtonDropdown";
 import {
 	PlaylistSidebarLayout,
 	PlayListSidebarDiv,
@@ -27,6 +30,32 @@ import {
 } from "./PlaylistSidebar.styles";
 
 const PlaylistSidebar = () => {
+	const dropdownRef = useRef<HTMLDivElement>(null);
+
+	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+	const handleDropdown = (e: CustomEvent<MouseEvent>) => {
+		const target = e.target as HTMLDivElement;
+
+		if (!dropdownRef?.current?.contains(target)) {
+			setIsDropdownOpen(false);
+		}
+	};
+
+	useEffect(() => {
+		if (isDropdownOpen) {
+			window.addEventListener("click", handleDropdown as EventListener);
+
+			document.body.style.overflow = "hidden";
+		}
+
+		return () => {
+			window.removeEventListener("click", handleDropdown as EventListener);
+
+			document.body.style.overflow = "";
+		};
+	}, [isDropdownOpen]);
+
 	return (
 		<PlaylistSidebarLayout>
 			<PlayListSidebarDiv>
@@ -71,10 +100,14 @@ const PlaylistSidebar = () => {
 									<span>어제 업데이트됨</span>
 								</InfoMetaDiv>
 							</InfoDetailDiv>
-							<InfoMoreButtonDiv>
+							<InfoMoreButtonDiv
+								ref={dropdownRef}
+								onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+							>
 								<button>
 									<HeaderMoreIcon />
 								</button>
+								{isDropdownOpen && <MoreButtonDropdown />}
 							</InfoMoreButtonDiv>
 							<ActionButtonDiv>
 								<ButtonDiv>

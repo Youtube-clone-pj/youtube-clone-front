@@ -53,7 +53,9 @@ import HistoryDeleteIcon from "@/assets/icon/ic-history-delete.svg?react";
 import HistoryStopIcon from "@/assets/icon/ic-history-stop.svg?react";
 import IndexIcon from "@/assets/icon/ic-list-index.svg?react";
 import HeaderLogoIcon from "@/assets/icon/ic-logo.svg?react";
+import MinusCircleIcon from "@/assets/icon/ic-minus-circle.svg?react";
 import NotificationIcon from "@/assets/icon/ic-notification.svg?react";
+import PlusIcon from "@/assets/icon/ic-plus.svg?react";
 import ProfileCenterIcon from "@/assets/icon/ic-profile-center.svg?react";
 import ProfileChangeIcon from "@/assets/icon/ic-profile-change.svg?react";
 import ProfileChannelIcon from "@/assets/icon/ic-profile-channel.svg?react";
@@ -133,4 +135,6 @@ export {
 	PlayFillIcon,
 	ShuffleIcon,
 	IndexIcon,
+	PlusIcon,
+	MinusCircleIcon,
 };
