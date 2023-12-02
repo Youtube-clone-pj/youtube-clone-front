@@ -17,6 +17,7 @@ export const ThumbnailDiv = styled.div`
 	position: relative;
 
 	& > a {
+		display: block;
 		height: 398px;
 	}
 `;
@@ -24,14 +25,13 @@ export const ThumbnailDiv = styled.div`
 export const ImgDiv = styled.div`
 	& > img {
 		width: 100%;
-		height: 100%;
-		object-fit: contain;
+		height: 398px;
+		object-fit: cover;
 		border-radius: 12px;
 	}
 `;
 
 export const DetailInfoDiv = styled.div`
-	margin: 0;
 	cursor: pointer;
 	position: relative;
 
@@ -42,10 +42,10 @@ export const DetailInfoDiv = styled.div`
 		& > a {
 			display: -webkit-box;
 			color: ${({ theme: { colors } }) => colors.white_primary};
-			font-family: Roboto, Arial, sans-serif;
-			font-size: 1rem;
+			font-family: "Roboto", "Arial", sans-serif;
+			font-size: 16px;
 			font-weight: ${({ theme: { font } }) => font.weight.medium};
-			line-height: 1.6rem;
+			line-height: 22px;
 			-webkit-line-clamp: 2;
 			-webkit-box-orient: vertical;
 			overflow: hidden;
@@ -60,12 +60,6 @@ export const DetailInfoDiv = styled.div`
 		font-family: "Roboto", "Arial", sans-serif;
 		font-size: 14px;
 		line-height: 20px;
-		overflow: hidden;
-		-webkit-line-clamp: 2;
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		text-overflow: ellipsis;
-		white-space: normal;
 	}
 `;
 

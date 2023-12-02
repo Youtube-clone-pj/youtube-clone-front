@@ -8,12 +8,9 @@ export const DropdownLayout = styled.div`
 `;
 
 export const DropdownDiv = styled.div`
-	border-radius: 8px;
-	max-height: 122px;
-	max-width: 98px;
 	width: 98px;
 	height: 122px;
-	position: relative;
+	border-radius: 8px;
 
 	& > ul {
 		background-color: ${({ theme: { colors } }) => colors.black_03};
@@ -33,6 +30,10 @@ export const DropdownDiv = styled.div`
 			min-height: 48px;
 			padding: 0 16px;
 			position: relative;
+
+			&:hover {
+				background-color: ${({ theme: { colors } }) => colors.white_alpha_10};
+			}
 		}
 
 		& > .active {

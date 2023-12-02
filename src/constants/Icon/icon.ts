@@ -8,6 +8,7 @@ import {
 	AiOutlineEllipsis as MoreIcon,
 	AiFillCaretUp as ReplyLessIcon,
 	AiFillCaretDown as ReplyMoreIcon,
+	AiOutlineClose as CloseIcon,
 } from "react-icons/ai";
 import {
 	BsPersonCircle as LoginPersonIcon,
@@ -19,6 +20,8 @@ import {
 	BsSkipEnd as EndIcon,
 	BsPause as StopIcon,
 	BsPlay as PlayIcon,
+	BsPlayFill as PlayFillIcon,
+	BsPersonSquare as SideMyChannelIcon,
 } from "react-icons/bs";
 import { FaGamepad as SideGameIcon } from "react-icons/fa";
 import { FiRadio as SideLiveIcon } from "react-icons/fi";
@@ -26,7 +29,6 @@ import { FiSettings as SideSettingIcon } from "react-icons/fi";
 import { ImPlay2 as SideShortsIcon } from "react-icons/im";
 import {
 	MdOutlineMoreVert as HeaderMoreIcon,
-	MdOutlineVideoLibrary as SideLibraryIcon,
 	MdOutlineLocalFireDepartment as SideHotIcon,
 	MdMovieCreation as SideMovieIcon,
 	MdArrowBackIosNew as LeftArrowIcon,
@@ -47,8 +49,15 @@ import {
 
 import CommentSortIcon from "@/assets/icon/ic-comment-sort.svg?react";
 import HeaderMenuIcon from "@/assets/icon/ic-header-menu.svg?react";
+import HistoryDeleteIcon from "@/assets/icon/ic-history-delete.svg?react";
+import HistoryStopIcon from "@/assets/icon/ic-history-stop.svg?react";
+import IndexIcon from "@/assets/icon/ic-list-index.svg?react";
 import HeaderLogoIcon from "@/assets/icon/ic-logo.svg?react";
+import MinusCircleIcon from "@/assets/icon/ic-minus-circle.svg?react";
 import NotificationIcon from "@/assets/icon/ic-notification.svg?react";
+import PlaylistAddIcon from "@/assets/icon/ic-playlist-add.svg?react";
+import PlaylistSaveIcon from "@/assets/icon/ic-playlist-save.svg?react";
+import PlusIcon from "@/assets/icon/ic-plus.svg?react";
 import ProfileCenterIcon from "@/assets/icon/ic-profile-center.svg?react";
 import ProfileChangeIcon from "@/assets/icon/ic-profile-change.svg?react";
 import ProfileChannelIcon from "@/assets/icon/ic-profile-channel.svg?react";
@@ -59,6 +68,7 @@ import ProfileStudioIcon from "@/assets/icon/ic-profile-studio.svg?react";
 import ProfileThemeIcon from "@/assets/icon/ic-profile-theme.svg?react";
 import SearchIcon from "@/assets/icon/ic-search.svg?react";
 import ShortsIcon from "@/assets/icon/ic-shorts.svg?react";
+import ShuffleIcon from "@/assets/icon/ic-shuffle.svg?react";
 import FullScreenCancelIcon from "@/assets/icon/VideoControl/ic-full-screen-cancel.svg?react";
 import FullScreenIcon from "@/assets/icon/VideoControl/ic-full-screen.svg?react";
 import NextIcon from "@/assets/icon/VideoControl/ic-next.svg?react";
@@ -76,7 +86,7 @@ export {
 	SideHomeIcon,
 	SideShortsIcon,
 	SideSubIcon,
-	SideLibraryIcon,
+	SideMyChannelIcon,
 	SideShowIcon,
 	SideMyVideoIcon,
 	SideAfterShowIcon,
@@ -121,4 +131,14 @@ export {
 	ReplyMoreIcon,
 	LeftArrowIcon,
 	RightArrowIcon,
+	CloseIcon,
+	HistoryDeleteIcon,
+	HistoryStopIcon,
+	PlayFillIcon,
+	ShuffleIcon,
+	IndexIcon,
+	PlusIcon,
+	MinusCircleIcon,
+	PlaylistAddIcon,
+	PlaylistSaveIcon,
 };

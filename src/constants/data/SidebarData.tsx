@@ -2,7 +2,7 @@ import {
 	SideHomeIcon,
 	SideShortsIcon,
 	SideSubIcon,
-	SideLibraryIcon,
+	SideMyChannelIcon,
 	SideShowIcon,
 	SideMyVideoIcon,
 	SideAfterShowIcon,
@@ -42,29 +42,29 @@ const ListHomeData = [
 
 const ListVideoData = [
 	{
-		icon: <SideLibraryIcon size={SIZE} color={WHITE} />,
-		title: "보관함",
-		link: "/",
+		icon: <SideMyChannelIcon size={SIZE} color={WHITE} />,
+		title: "내 채널",
+		link: "/channel/user-bj5em7yz5w",
 	},
 	{
 		icon: <SideShowIcon size={SIZE} color={WHITE} />,
 		title: "시청 기록",
-		link: "/",
+		link: "/feed/history",
 	},
 	{
 		icon: <SideMyVideoIcon size={SIZE} color={WHITE} />,
 		title: "내 동영상",
-		link: "/",
+		link: "/studio",
 	},
 	{
 		icon: <SideAfterShowIcon size={SIZE} color={WHITE} />,
 		title: "나중에 볼 동영상",
-		link: "/",
+		link: "/playlist?later",
 	},
 	{
 		icon: <SideLikeVideoIcon size={SIZE} color={WHITE} />,
 		title: "좋아요 표시한 동영상",
-		link: "/",
+		link: "/playlist?like",
 	},
 ];
 

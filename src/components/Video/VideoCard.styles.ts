@@ -13,15 +13,23 @@ export const CardInnerDiv = styled.div`
 
 export const ThumbnailDiv = styled.div`
 	width: 100%;
+	height: 193px;
 	position: relative;
 
 	& > a {
-		height: 193px;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		border-radius: 12px;
+		height: 100%;
+		overflow: hidden;
 
 		& > img {
 			width: 100%;
 			height: 100%;
-			border-radius: 12px;
 		}
 	}
 `;
