@@ -27,7 +27,6 @@ interface videoCardProp {
 }
 
 const PlaylistVideoCard = ({ id, locate }: videoCardProp) => {
-	console.log(locate);
 	const dropdownRef = useRef<HTMLDivElement>(null);
 
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
