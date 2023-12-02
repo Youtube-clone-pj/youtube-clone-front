@@ -15,6 +15,8 @@ export const pathnameCheck = ({ pathname, search }: locationProp) => {
 			return "내 채널";
 		} else if (pathname.includes("history")) {
 			return "시청 기록";
+		} else if (pathname.includes("guide_builder")) {
+			return "채널 탐색";
 		} else {
 			return "홈";
 		}
