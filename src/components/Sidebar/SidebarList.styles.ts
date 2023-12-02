@@ -13,11 +13,23 @@ export const ContentUl = styled.ul`
 	}
 `;
 
-export const ContentLi = styled.li<{ $active: boolean }>`
+export const DefaultLi = styled.li`
 	padding: 0 12px;
 	height: 48px;
 	display: flex;
 	border-radius: 10px;
+`;
+
+export const TitleLi = styled(DefaultLi)<{ $title: boolean | undefined }>`
+	cursor: ${({ $title }) => ($title ? "pointer" : "default")};
+
+	&:hover {
+		background: ${({ $title, theme: { colors } }) =>
+			$title ? colors.white_alpha_10 : colors.transparent};
+	}
+`;
+
+export const ContentLi = styled(DefaultLi)<{ $active: boolean }>`
 	background: ${({ $active, theme: { colors } }) =>
 		$active ? colors.white_alpha_10 : colors.transparent};
 
@@ -26,10 +38,10 @@ export const ContentLi = styled.li<{ $active: boolean }>`
 	}
 `;
 
-export const ItemDiv = styled.div`
+export const ItemDiv = styled.div<{ $title: boolean }>`
 	display: flex;
 	align-items: center;
-	gap: 24px;
+	gap: ${({ $title }) => ($title ? "8px" : "24px")};
 
 	& > h2 {
 		color: ${({ theme: { colors } }) => colors.white_primary};

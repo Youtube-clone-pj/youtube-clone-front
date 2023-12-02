@@ -6,6 +6,7 @@ import { pathnameCheck } from "@/utils/pathnameCheck";
 import {
 	SidebarListLayout,
 	ContentUl,
+	TitleLi,
 	ContentLi,
 	ItemDiv,
 } from "./SidebarList.styles";
@@ -26,11 +27,21 @@ const SidebarList = () => {
 	return (
 		<SidebarListLayout>
 			{SidebarData.map((data) => (
-				<ContentUl key={data.title}>
+				<ContentUl key={data.id}>
+					{data.title && (
+						<a href={data.link}>
+							<TitleLi $title={data.click}>
+								<ItemDiv $title>
+									<h2>{data.title}</h2>
+									{data.icon}
+								</ItemDiv>
+							</TitleLi>
+						</a>
+					)}
 					{data.list.map(({ icon, title, link }: listDataType) => (
 						<a key={title} href={link}>
 							<ContentLi $active={title === active}>
-								<ItemDiv>
+								<ItemDiv $title={false}>
 									{icon}
 									<h2>{title}</h2>
 								</ItemDiv>

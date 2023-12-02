@@ -17,6 +17,7 @@ import {
 	SideReportIcon,
 	SideCenterIcon,
 	SideInfoIcon,
+	YouArrowIcon,
 } from "../Icon/icon";
 
 const SIZE = 24;
@@ -126,19 +127,24 @@ const ListSettingData = [
 
 export const SidebarData = [
 	{
-		title: "home",
+		id: "home",
 		list: ListHomeData,
 	},
 	{
-		title: "video",
+		id: "video",
+		title: "나",
+		icon: <YouArrowIcon />,
+		click: true,
+		link: "/feed/you",
 		list: ListVideoData,
 	},
 	{
-		title: "explore",
+		id: "explore",
+		title: "탐색",
 		list: ListExploreData,
 	},
 	{
-		title: "setting",
+		id: "setting",
 		list: ListSettingData,
 	},
 ];

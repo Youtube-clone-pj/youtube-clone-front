@@ -69,6 +69,7 @@ import ProfileThemeIcon from "@/assets/icon/ic-profile-theme.svg?react";
 import SearchIcon from "@/assets/icon/ic-search.svg?react";
 import ShortsIcon from "@/assets/icon/ic-shorts.svg?react";
 import ShuffleIcon from "@/assets/icon/ic-shuffle.svg?react";
+import YouArrowIcon from "@/assets/icon/ic-you-arrow.svg?react";
 import FullScreenCancelIcon from "@/assets/icon/VideoControl/ic-full-screen-cancel.svg?react";
 import FullScreenIcon from "@/assets/icon/VideoControl/ic-full-screen.svg?react";
 import NextIcon from "@/assets/icon/VideoControl/ic-next.svg?react";
@@ -141,4 +142,5 @@ export {
 	MinusCircleIcon,
 	PlaylistAddIcon,
 	PlaylistSaveIcon,
+	YouArrowIcon,
 };
