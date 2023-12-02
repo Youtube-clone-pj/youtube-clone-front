@@ -18,9 +18,11 @@ import {
 	SideCenterIcon,
 	SideInfoIcon,
 	YouArrowIcon,
+	SideCircleIcon,
+	SideExploreIcon,
 } from "../Icon/icon";
 
-const SIZE = 24;
+const SIZE = 20;
 const WHITE = "#fff";
 
 const ListHomeData = [
@@ -66,6 +68,24 @@ const ListVideoData = [
 		icon: <SideLikeVideoIcon size={SIZE} color={WHITE} />,
 		title: "좋아요 표시한 동영상",
 		link: "/playlist?like",
+	},
+];
+
+const ListSubscriptionData = [
+	{
+		icon: <SideCircleIcon size={SIZE} color={WHITE} />,
+		title: "구독한 채널 이름",
+		link: "/channel/userid",
+	},
+	{
+		icon: <SideCircleIcon size={SIZE} color={WHITE} />,
+		title: "구독한 채널 이름",
+		link: "/channel/userid",
+	},
+	{
+		icon: <SideExploreIcon size={SIZE} color={WHITE} />,
+		title: "채널 탐색",
+		link: "/feed/guide_builder",
 	},
 ];
 
@@ -137,6 +157,11 @@ export const SidebarData = [
 		click: true,
 		link: "/feed/you",
 		list: ListVideoData,
+	},
+	{
+		id: "subscription",
+		title: "구독",
+		list: ListSubscriptionData,
 	},
 	{
 		id: "explore",

@@ -15,7 +15,7 @@ export const ContentUl = styled.ul`
 
 export const DefaultLi = styled.li`
 	padding: 0 12px;
-	height: 48px;
+	height: 40px;
 	display: flex;
 	border-radius: 10px;
 `;
@@ -42,6 +42,7 @@ export const ItemDiv = styled.div<{ $title: boolean }>`
 	display: flex;
 	align-items: center;
 	gap: ${({ $title }) => ($title ? "8px" : "24px")};
+	font-size: ${({ $title }) => ($title ? "16px" : "14px")};
 
 	& > h2 {
 		color: ${({ theme: { colors } }) => colors.white_primary};

@@ -9,6 +9,7 @@ import {
 	AiFillCaretUp as ReplyLessIcon,
 	AiFillCaretDown as ReplyMoreIcon,
 	AiOutlineClose as CloseIcon,
+	AiOutlinePlusCircle as SideExploreIcon,
 } from "react-icons/ai";
 import {
 	BsPersonCircle as LoginPersonIcon,
@@ -22,6 +23,7 @@ import {
 	BsPlay as PlayIcon,
 	BsPlayFill as PlayFillIcon,
 	BsPersonSquare as SideMyChannelIcon,
+	BsFillCircleFill as SideCircleIcon,
 } from "react-icons/bs";
 import { FaGamepad as SideGameIcon } from "react-icons/fa";
 import { FiRadio as SideLiveIcon } from "react-icons/fi";
@@ -143,4 +145,6 @@ export {
 	PlaylistAddIcon,
 	PlaylistSaveIcon,
 	YouArrowIcon,
+	SideExploreIcon,
+	SideCircleIcon,
 };
