@@ -73,6 +73,9 @@ const GlobalStyles = createGlobalStyle`${css`
 	button {
 		all: unset;
 	}
+	body {
+		background-color: ${({ theme: { colors } }) => colors.black_primary};
+	}
 `}
 `;
 

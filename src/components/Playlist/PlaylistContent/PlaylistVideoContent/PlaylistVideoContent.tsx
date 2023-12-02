@@ -1,5 +1,6 @@
 import PlaylistVideoCard from "./PlaylistVideoCard/PlaylistVideoCard";
 import { PlaylistVideoContentLayout } from "./PlaylistVideoContent.styles";
+import { locationProp } from "../../Playlist";
 
 const mockItems = [
 	{
@@ -43,11 +44,11 @@ const mockItems = [
 	},
 ];
 
-const PlaylistVideoContent = () => {
+const PlaylistVideoContent = ({ locate }: locationProp) => {
 	return (
-		<PlaylistVideoContentLayout>
+		<PlaylistVideoContentLayout $padding={locate}>
 			{mockItems.map((info) => (
-				<PlaylistVideoCard {...info} key={info.id} />
+				<PlaylistVideoCard id={info.id} key={info.id} locate={locate} />
 			))}
 		</PlaylistVideoContentLayout>
 	);

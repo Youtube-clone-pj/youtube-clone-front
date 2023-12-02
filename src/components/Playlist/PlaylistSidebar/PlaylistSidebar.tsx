@@ -28,8 +28,9 @@ import {
 	ButtonDiv,
 	ButtonRightDiv,
 } from "./PlaylistSidebar.styles";
+import { locationProp } from "../Playlist";
 
-const PlaylistSidebar = () => {
+const PlaylistSidebar = ({ locate }: locationProp) => {
 	const dropdownRef = useRef<HTMLDivElement>(null);
 
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -89,7 +90,7 @@ const PlaylistSidebar = () => {
 							</ThumbnailDiv>
 						</a>
 						<InfoDiv>
-							<h1>나중에 볼 동영상</h1>
+							<h1>{locate ? "나중에 볼 동영상" : "좋아요 표시한 동영상"}</h1>
 							<InfoDetailDiv>
 								<h2>
 									<a href="#">김준식</a>

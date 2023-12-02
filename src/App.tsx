@@ -25,7 +25,7 @@ const router = createBrowserRouter([
 				element: <ShortsPage />,
 			},
 			{
-				path: "/channel",
+				path: "/channel/:id",
 				element: <ChannelPage />,
 			},
 			{
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
 				element: <HistoryPage />,
 			},
 			{
-				path: "/playlist",
+				path: `/playlist`,
 				element: <PlaylistPage />,
 			},
 		],

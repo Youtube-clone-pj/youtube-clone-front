@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-export const PlaylistVideoCardLayout = styled.div`
+export const PlaylistVideoCardLayout = styled.div<{ $cursor: boolean }>`
 	display: flex;
 	align-items: center;
 	border-radius: 12px;
+	cursor: ${({ $cursor }) => ($cursor ? "grab" : "default")};
 
 	&:hover {
 		background-color: ${({ theme: { colors } }) => colors.white_alpha_10};
@@ -13,7 +14,6 @@ export const PlaylistVideoCardLayout = styled.div`
 export const IndexDiv = styled.div`
 	display: flex;
 	align-items: center;
-	cursor: grab;
 `;
 
 export const IndexIconDiv = styled.div`
@@ -26,6 +26,20 @@ export const IndexIconDiv = styled.div`
 		width: 24px;
 		height: 24px;
 	}
+`;
+
+export const IndexTextDiv = styled.div`
+	color: ${({ theme: { colors } }) => colors.gray};
+	text-align: center;
+	width: 36px;
+	font-family: "Roboto", "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: ${({ theme: { font } }) => font.weight.medium};
+	display: flex;
+	flex-direction: column;
+	flex: none;
+	justify-content: center;
 `;
 
 export const ContentDiv = styled.div`

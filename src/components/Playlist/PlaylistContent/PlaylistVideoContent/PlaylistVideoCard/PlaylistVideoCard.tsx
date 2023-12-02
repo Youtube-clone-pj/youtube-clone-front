@@ -7,6 +7,7 @@ import {
 	PlaylistVideoCardLayout,
 	IndexDiv,
 	IndexIconDiv,
+	IndexTextDiv,
 	ContentDiv,
 	ContentInnerDiv,
 	ThumbnailDiv,
@@ -20,11 +21,13 @@ import {
 	IconDiv,
 } from "./PlaylistVideoCard.styles";
 
-interface infoType {
+interface videoCardProp {
 	id: number;
+	locate: boolean;
 }
 
-const PlaylistVideoCard = (info: infoType) => {
+const PlaylistVideoCard = ({ id, locate }: videoCardProp) => {
+	console.log(locate);
 	const dropdownRef = useRef<HTMLDivElement>(null);
 
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -60,16 +63,23 @@ const PlaylistVideoCard = (info: infoType) => {
 	return (
 		<PlaylistVideoCardLayout
 			onMouseOver={() => {
-				handleOption(info.id);
+				handleOption(id);
 			}}
 			onMouseOut={() => {
 				setOptionMenuHoverIndex(null);
 			}}
+			$cursor={locate}
 		>
 			<IndexDiv>
-				<IndexIconDiv>
-					<IndexIcon />
-				</IndexIconDiv>
+				{locate ? (
+					<IndexIconDiv>
+						<IndexIcon />
+					</IndexIconDiv>
+				) : (
+					<IndexTextDiv>
+						<span>{id}</span>
+					</IndexTextDiv>
+				)}
 			</IndexDiv>
 			<ContentDiv>
 				<ContentInnerDiv>
@@ -107,7 +117,7 @@ const PlaylistVideoCard = (info: infoType) => {
 				</ContentInnerDiv>
 			</ContentDiv>
 			<MenuDiv ref={dropdownRef}>
-				<IconDiv $showmenu={optionMenuHoverIndex === info.id}>
+				<IconDiv $showmenu={optionMenuHoverIndex === id}>
 					<HeaderMoreIcon
 						size={24}
 						color="#fff"

@@ -24,3 +24,15 @@ export const TagbarData = [
 		title: "새로운 맞춤 동영상",
 	},
 ];
+
+export const PlaylistTagbarData = [
+	{
+		title: "전체",
+	},
+	{
+		title: "동영상",
+	},
+	{
+		title: "Shorts",
+	},
+];
