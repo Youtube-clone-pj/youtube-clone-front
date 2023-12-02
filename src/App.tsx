@@ -9,6 +9,7 @@ import {
 	ChannelPage,
 	HistoryPage,
 	PlaylistPage,
+	FeedGuidePage,
 } from "./pages";
 
 const router = createBrowserRouter([
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
 			{
 				path: `/playlist`,
 				element: <PlaylistPage />,
+			},
+			{
+				path: "/feed/guide_builder",
+				element: <FeedGuidePage />,
 			},
 		],
 	},
