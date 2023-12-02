@@ -55,6 +55,8 @@ import IndexIcon from "@/assets/icon/ic-list-index.svg?react";
 import HeaderLogoIcon from "@/assets/icon/ic-logo.svg?react";
 import MinusCircleIcon from "@/assets/icon/ic-minus-circle.svg?react";
 import NotificationIcon from "@/assets/icon/ic-notification.svg?react";
+import PlaylistAddIcon from "@/assets/icon/ic-playlist-add.svg?react";
+import PlaylistSaveIcon from "@/assets/icon/ic-playlist-save.svg?react";
 import PlusIcon from "@/assets/icon/ic-plus.svg?react";
 import ProfileCenterIcon from "@/assets/icon/ic-profile-center.svg?react";
 import ProfileChangeIcon from "@/assets/icon/ic-profile-change.svg?react";
@@ -137,4 +139,6 @@ export {
 	IndexIcon,
 	PlusIcon,
 	MinusCircleIcon,
+	PlaylistAddIcon,
+	PlaylistSaveIcon,
 };

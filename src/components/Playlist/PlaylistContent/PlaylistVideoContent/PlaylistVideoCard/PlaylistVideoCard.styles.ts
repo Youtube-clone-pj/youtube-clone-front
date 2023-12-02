@@ -157,13 +157,19 @@ export const InfoMetaDiv = styled.div`
 	}
 `;
 
-export const MenuDiv = styled.div<{ $showmenu: boolean }>`
-	display: ${({ $showmenu }) => ($showmenu ? "flex" : "none")};
+export const MenuDiv = styled.div`
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 40px;
 	height: 40px;
-	min-width: 40px;
+	border-radius: 50%;
+	position: relative;
+`;
+
+export const IconDiv = styled.div<{ $showmenu: boolean }>`
+	display: ${({ $showmenu }) => ($showmenu ? "block" : "none")};
+	cursor: pointer;
 
 	& > svg {
 		width: 24px;

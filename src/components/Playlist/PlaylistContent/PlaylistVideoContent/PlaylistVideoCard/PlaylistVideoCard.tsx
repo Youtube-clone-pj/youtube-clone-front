@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import { IndexIcon, HeaderMoreIcon } from "@/constants/Icon/icon";
 
+import PlaylistMoreDropdown from "./PlaylistMoreDropdown/PlaylistMoreDropdown";
 import {
 	PlaylistVideoCardLayout,
 	IndexDiv,
@@ -16,6 +17,7 @@ import {
 	InfoDiv,
 	InfoMetaDiv,
 	MenuDiv,
+	IconDiv,
 } from "./PlaylistVideoCard.styles";
 
 interface infoType {
@@ -23,15 +25,47 @@ interface infoType {
 }
 
 const PlaylistVideoCard = (info: infoType) => {
+	const dropdownRef = useRef<HTMLDivElement>(null);
+
+	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 	const [optionMenuHoverIndex, setOptionMenuHoverIndex] = useState<
 		number | null
 	>(null);
 
+	const handleDropdown = (e: CustomEvent<MouseEvent>) => {
+		const target = e.target as HTMLDivElement;
+
+		if (!dropdownRef?.current?.contains(target)) {
+			setIsDropdownOpen(false);
+		}
+	};
+
 	const handleOption = (num: number) =>
 		setOptionMenuHoverIndex((prev) => (prev === num ? null : num));
 
+	useEffect(() => {
+		if (isDropdownOpen) {
+			window.addEventListener("click", handleDropdown as EventListener);
+
+			document.body.style.overflow = "hidden";
+		}
+
+		return () => {
+			window.removeEventListener("click", handleDropdown as EventListener);
+
+			document.body.style.overflow = "";
+		};
+	}, [isDropdownOpen]);
+
 	return (
-		<PlaylistVideoCardLayout>
+		<PlaylistVideoCardLayout
+			onMouseOver={() => {
+				handleOption(info.id);
+			}}
+			onMouseOut={() => {
+				setOptionMenuHoverIndex(null);
+			}}
+		>
 			<IndexDiv>
 				<IndexIconDiv>
 					<IndexIcon />
@@ -55,14 +89,7 @@ const PlaylistVideoCard = (info: infoType) => {
 							</OverlayDiv>
 						</a>
 					</ThumbnailDiv>
-					<InfoDiv
-						onMouseOver={() => {
-							handleOption(info.id);
-						}}
-						onMouseOut={() => {
-							setOptionMenuHoverIndex(null);
-						}}
-					>
+					<InfoDiv>
 						<h3>
 							<a href="#">
 								[무박 n일🦉밤샘 방구석 여행🏝][섬] #2 올타임 레전드, 흑산도 |
@@ -79,8 +106,15 @@ const PlaylistVideoCard = (info: infoType) => {
 					</InfoDiv>
 				</ContentInnerDiv>
 			</ContentDiv>
-			<MenuDiv $showmenu={optionMenuHoverIndex === info.id}>
-				<HeaderMoreIcon size={24} color="#fff" />
+			<MenuDiv ref={dropdownRef}>
+				<IconDiv $showmenu={optionMenuHoverIndex === info.id}>
+					<HeaderMoreIcon
+						size={24}
+						color="#fff"
+						onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+					/>
+				</IconDiv>
+				{isDropdownOpen && <PlaylistMoreDropdown />}
 			</MenuDiv>
 		</PlaylistVideoCardLayout>
 	);
