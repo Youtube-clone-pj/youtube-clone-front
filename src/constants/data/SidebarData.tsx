@@ -79,7 +79,7 @@ const ListSubscriptionData = [
 	},
 	{
 		icon: <SideCircleIcon size={SIZE} color={WHITE} />,
-		title: "구독한 채널 이름",
+		title: "구독한 채널 이름2",
 		link: "/channel/userid",
 	},
 	{
