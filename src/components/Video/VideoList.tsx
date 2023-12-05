@@ -16,6 +16,10 @@ export interface videoCardType {
 	postOwnerThumbnail: string;
 }
 
+export type videListProp = {
+	mt: boolean;
+};
+
 const count = [1, 2, 3, 4];
 
 const mockItems = [
@@ -69,9 +73,9 @@ const mockItems = [
 	},
 ];
 
-const VideoList = () => {
+const VideoList = ({ mt }: videListProp) => {
 	return (
-		<VideoListLayout>
+		<VideoListLayout mt={mt}>
 			<VidoeListRowDiv>
 				{count.map((count) => (
 					<RowInnerDiv key={count}>

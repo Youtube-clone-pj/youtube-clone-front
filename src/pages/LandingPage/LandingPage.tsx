@@ -13,7 +13,7 @@ const LandingPage = () => {
 			<Sidebar />
 			<ContentDiv>
 				<Tagbar />
-				<VideoList />
+				<VideoList mt={true} />
 				<ShortsList />
 			</ContentDiv>
 		</>

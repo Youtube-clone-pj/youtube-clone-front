@@ -1,3 +1,5 @@
+import ShortsList from "@/components/Shorts/ShortsList";
+import VideoList from "@/components/Video/VideoList";
 import { FlowBoardIcon, FlowListIcon } from "@/constants/Icon/icon";
 
 import {
@@ -27,6 +29,8 @@ const Subscription = () => {
 					</MenuDiv>
 				</TitleInnerDiv>
 			</TitleDiv>
+			<VideoList marginTop={false} />
+			<ShortsList />
 		</LayoutDiv>
 	);
 };

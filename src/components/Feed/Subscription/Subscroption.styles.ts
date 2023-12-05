@@ -15,7 +15,7 @@ export const TitleDiv = styled.div`
 
 export const TitleInnerDiv = styled.div`
 	width: 100%;
-	margin: 24px;
+	margin: 24px 24px 8px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
