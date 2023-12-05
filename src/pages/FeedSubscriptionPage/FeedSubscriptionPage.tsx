@@ -1,4 +1,4 @@
-import Subscription from "@/components/Feed/Subscription";
+import Subscription from "@/components/Feed/Subscription/Subscription";
 
 import { LayoutDiv } from "./FeedSubscriptionPage.styles";
 
