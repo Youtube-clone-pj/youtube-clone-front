@@ -50,6 +50,8 @@ import {
 } from "react-icons/tb";
 
 import CommentSortIcon from "@/assets/icon/ic-comment-sort.svg?react";
+import FlowBoardIcon from "@/assets/icon/ic-flow-board.svg?react";
+import FlowListIcon from "@/assets/icon/ic-flow-list.svg?react";
 import HeaderMenuIcon from "@/assets/icon/ic-header-menu.svg?react";
 import HistoryDeleteIcon from "@/assets/icon/ic-history-delete.svg?react";
 import HistoryStopIcon from "@/assets/icon/ic-history-stop.svg?react";
@@ -147,4 +149,6 @@ export {
 	YouArrowIcon,
 	SideExploreIcon,
 	SideCircleIcon,
+	FlowBoardIcon,
+	FlowListIcon,
 };

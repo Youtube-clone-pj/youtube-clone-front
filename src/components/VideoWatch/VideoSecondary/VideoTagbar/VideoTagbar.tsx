@@ -71,8 +71,8 @@ const VideoTagbar = () => {
 						disablePrevButton
 							? "right"
 							: disableNextButton
-							? "left"
-							: "gradient"
+							  ? "left"
+							  : "gradient"
 					}
 					ref={parentRef}
 				>
