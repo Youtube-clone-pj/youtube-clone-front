@@ -9,7 +9,7 @@ export const pathnameCheck = ({ pathname, search }: locationProp) => {
 			return "Shorts";
 		} else if (pathname.includes("subscription")) {
 			return "구독";
-		} else if (pathname.includes("you")) {
+		} else if (pathname.includes("my")) {
 			return "나";
 		} else if (pathname.includes("channel")) {
 			return "내 채널";

@@ -29,7 +29,7 @@ const Subscription = () => {
 					</MenuDiv>
 				</TitleInnerDiv>
 			</TitleDiv>
-			<VideoList marginTop={false} />
+			<VideoList mt={false} />
 			<ShortsList />
 		</LayoutDiv>
 	);

@@ -11,6 +11,7 @@ import {
 	PlaylistPage,
 	FeedGuidePage,
 	FeedSubscriptionPage,
+	FeedMyPage,
 } from "./pages";
 
 const router = createBrowserRouter([
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
 			{
 				path: "/feed/guide_builder",
 				element: <FeedGuidePage />,
+			},
+			{
+				path: "/feed/my",
+				element: <FeedMyPage />,
 			},
 		],
 	},

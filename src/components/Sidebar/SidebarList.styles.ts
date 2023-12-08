@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { listStyleType } from "./SidebarList";
+
 export const SidebarListLayout = styled.div`
 	padding: 12px;
 `;
@@ -20,8 +22,10 @@ export const DefaultLi = styled.li`
 	border-radius: 10px;
 `;
 
-export const TitleLi = styled(DefaultLi)<{ $title: boolean | undefined }>`
+export const TitleLi = styled(DefaultLi)<listStyleType>`
 	cursor: ${({ $title }) => ($title ? "pointer" : "default")};
+	background: ${({ $active, theme: { colors } }) =>
+		$active ? colors.white_alpha_10 : colors.transparent};
 
 	&:hover {
 		background: ${({ $title, theme: { colors } }) =>

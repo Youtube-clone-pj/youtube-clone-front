@@ -3,10 +3,7 @@ import {
 	SideShortsIcon,
 	SideSubIcon,
 	SideMyChannelIcon,
-	SideShowIcon,
 	SideMyVideoIcon,
-	SideAfterShowIcon,
-	SideLikeVideoIcon,
 	SideHotIcon,
 	SideMusicIcon,
 	SideMovieIcon,
@@ -20,6 +17,9 @@ import {
 	YouArrowIcon,
 	SideCircleIcon,
 	SideExploreIcon,
+	RecordIcon,
+	LaterShowIcon,
+	LikeVideoIcon,
 } from "../Icon/icon";
 
 const SIZE = 20;
@@ -50,7 +50,7 @@ const ListVideoData = [
 		link: "/channel/user-bj5em7yz5w",
 	},
 	{
-		icon: <SideShowIcon size={SIZE} color={WHITE} />,
+		icon: <RecordIcon />,
 		title: "시청 기록",
 		link: "/feed/history",
 	},
@@ -60,12 +60,12 @@ const ListVideoData = [
 		link: "/studio",
 	},
 	{
-		icon: <SideAfterShowIcon size={SIZE} color={WHITE} />,
+		icon: <LaterShowIcon />,
 		title: "나중에 볼 동영상",
 		link: "/playlist?later",
 	},
 	{
-		icon: <SideLikeVideoIcon size={SIZE} color={WHITE} />,
+		icon: <LikeVideoIcon />,
 		title: "좋아요 표시한 동영상",
 		link: "/playlist?like",
 	},
@@ -155,7 +155,7 @@ export const SidebarData = [
 		title: "나",
 		icon: <YouArrowIcon />,
 		click: true,
-		link: "/feed/you",
+		link: "/feed/my",
 		list: ListVideoData,
 	},
 	{
