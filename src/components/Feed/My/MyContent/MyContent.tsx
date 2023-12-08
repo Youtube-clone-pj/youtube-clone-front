@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
 import {
-	RecordIcon,
-	LaterShowIcon,
+	SideRecordIcon,
+	SideLaterShowIcon,
 	PlaylistIcon,
-	LikeVideoIcon,
+	SideLikeVideoIcon,
 } from "@/constants/Icon/icon";
 
 import {
@@ -22,11 +22,11 @@ import MyContentVideoCard from "../MyContentVideoCard/MyContentVideoCard";
 const sectionMockItems = [
 	{
 		title: "기록",
-		icon: <RecordIcon />,
+		icon: <SideRecordIcon />,
 	},
 	{
 		title: "나중에 볼 동영상",
-		icon: <LaterShowIcon />,
+		icon: <SideLaterShowIcon />,
 	},
 	{
 		title: "재생목록",
@@ -34,7 +34,7 @@ const sectionMockItems = [
 	},
 	{
 		title: "좋아요 표시한 동영상",
-		icon: <LikeVideoIcon />,
+		icon: <SideLikeVideoIcon />,
 	},
 ];
 
