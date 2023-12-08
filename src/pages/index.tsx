@@ -1,5 +1,6 @@
 import ChannelPage from "./ChannelPage/ChannelPage";
 import FeedGuidePage from "./FeedGuidePage";
+import FeedMyPage from "./FeedMyPage/FeedMyPage";
 import FeedSubscriptionPage from "./FeedSubscriptionPage/FeedSubscriptionPage";
 import HistoryPage from "./HistoryPage/HistoryPage";
 import LandingPage from "./LandingPage/LandingPage";
@@ -20,4 +21,5 @@ export {
 	PlaylistPage,
 	FeedGuidePage,
 	FeedSubscriptionPage,
+	FeedMyPage,
 };

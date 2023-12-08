@@ -155,7 +155,7 @@ export const SidebarData = [
 		title: "나",
 		icon: <YouArrowIcon />,
 		click: true,
-		link: "/feed/you",
+		link: "/feed/my",
 		list: ListVideoData,
 	},
 	{
