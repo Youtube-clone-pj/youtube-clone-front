@@ -70,6 +70,7 @@ import ProfileOpinionIcon from "@/assets/icon/ic-profile-opinion.svg?react";
 import ProfileSettingIcon from "@/assets/icon/ic-profile-setting.svg?react";
 import ProfileStudioIcon from "@/assets/icon/ic-profile-studio.svg?react";
 import ProfileThemeIcon from "@/assets/icon/ic-profile-theme.svg?react";
+import RecordIcon from "@/assets/icon/ic-record.svg?react";
 import SearchIcon from "@/assets/icon/ic-search.svg?react";
 import ShortsIcon from "@/assets/icon/ic-shorts.svg?react";
 import ShuffleIcon from "@/assets/icon/ic-shuffle.svg?react";
@@ -151,4 +152,5 @@ export {
 	SideCircleIcon,
 	FlowBoardIcon,
 	FlowListIcon,
+	RecordIcon,
 };
