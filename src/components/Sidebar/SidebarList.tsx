@@ -17,6 +17,11 @@ interface listDataType {
 	link: string;
 }
 
+export interface listStyleType {
+	$title: boolean | undefined;
+	$active: boolean;
+}
+
 const SidebarList = () => {
 	const location = useLocation();
 
@@ -30,7 +35,7 @@ const SidebarList = () => {
 				<ContentUl key={data.id}>
 					{data.title && (
 						<a href={data.link}>
-							<TitleLi $title={data.click}>
+							<TitleLi $title={data.click} $active={data.title === active}>
 								<ItemDiv $title>
 									<h2>{data.title}</h2>
 									{data.icon}
