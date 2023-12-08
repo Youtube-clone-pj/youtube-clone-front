@@ -1,7 +1,7 @@
 import {
 	SideHomeIcon,
 	SideShortsIcon,
-	SideSubIcon,
+	SideSubscriptionIcon,
 	SideMyChannelIcon,
 	SideMyVideoIcon,
 	SideHotIcon,
@@ -17,9 +17,9 @@ import {
 	YouArrowIcon,
 	SideCircleIcon,
 	SideExploreIcon,
-	RecordIcon,
-	LaterShowIcon,
-	LikeVideoIcon,
+	SideRecordIcon,
+	SideLaterShowIcon,
+	SideLikeVideoIcon,
 } from "../Icon/icon";
 
 const SIZE = 20;
@@ -27,17 +27,17 @@ const WHITE = "#fff";
 
 const ListHomeData = [
 	{
-		icon: <SideHomeIcon size={SIZE} color={WHITE} />,
+		icon: <SideHomeIcon />,
 		title: "홈",
 		link: "/",
 	},
 	{
-		icon: <SideShortsIcon size={SIZE} color={WHITE} />,
+		icon: <SideShortsIcon />,
 		title: "Shorts",
 		link: "/shorts/1",
 	},
 	{
-		icon: <SideSubIcon size={SIZE} color={WHITE} />,
+		icon: <SideSubscriptionIcon />,
 		title: "구독",
 		link: "/feed/subscription",
 	},
@@ -45,27 +45,27 @@ const ListHomeData = [
 
 const ListVideoData = [
 	{
-		icon: <SideMyChannelIcon size={SIZE} color={WHITE} />,
+		icon: <SideMyChannelIcon />,
 		title: "내 채널",
 		link: "/channel/user-bj5em7yz5w",
 	},
 	{
-		icon: <RecordIcon />,
+		icon: <SideRecordIcon />,
 		title: "시청 기록",
 		link: "/feed/history",
 	},
 	{
-		icon: <SideMyVideoIcon size={SIZE} color={WHITE} />,
+		icon: <SideMyVideoIcon />,
 		title: "내 동영상",
 		link: "/studio",
 	},
 	{
-		icon: <LaterShowIcon />,
+		icon: <SideLaterShowIcon />,
 		title: "나중에 볼 동영상",
 		link: "/playlist?later",
 	},
 	{
-		icon: <LikeVideoIcon />,
+		icon: <SideLikeVideoIcon />,
 		title: "좋아요 표시한 동영상",
 		link: "/playlist?like",
 	},
@@ -91,32 +91,32 @@ const ListSubscriptionData = [
 
 const ListExploreData = [
 	{
-		icon: <SideHotIcon size={SIZE} color={WHITE} />,
+		icon: <SideHotIcon />,
 		title: "인기 급상승",
 		link: "/",
 	},
 	{
-		icon: <SideMusicIcon size={SIZE} color={WHITE} />,
+		icon: <SideMusicIcon />,
 		title: "음악",
 		link: "/",
 	},
 	{
-		icon: <SideMovieIcon size={SIZE} color={WHITE} />,
+		icon: <SideMovieIcon />,
 		title: "영화",
 		link: "/",
 	},
 	{
-		icon: <SideLiveIcon size={SIZE} color={WHITE} />,
+		icon: <SideLiveIcon />,
 		title: "실시간",
 		link: "/",
 	},
 	{
-		icon: <SideGameIcon size={SIZE} color={WHITE} />,
+		icon: <SideGameIcon />,
 		title: "게임",
 		link: "/",
 	},
 	{
-		icon: <SideSportIcon size={SIZE} color={WHITE} />,
+		icon: <SideSportIcon />,
 		title: "스포츠",
 		link: "/",
 	},
@@ -124,22 +124,22 @@ const ListExploreData = [
 
 const ListSettingData = [
 	{
-		icon: <SideSettingIcon size={SIZE} color={WHITE} />,
+		icon: <SideSettingIcon />,
 		title: "설정",
 		link: "/",
 	},
 	{
-		icon: <SideReportIcon size={SIZE} color={WHITE} />,
+		icon: <SideReportIcon />,
 		title: "신고 기록",
 		link: "/",
 	},
 	{
-		icon: <SideCenterIcon size={SIZE} color={WHITE} />,
+		icon: <SideCenterIcon />,
 		title: "고객센터",
 		link: "/",
 	},
 	{
-		icon: <SideInfoIcon size={SIZE} color={WHITE} />,
+		icon: <SideInfoIcon />,
 		title: "의견 보내기",
 		link: "/",
 	},

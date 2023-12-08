@@ -9,6 +9,7 @@ export const SidebarListLayout = styled.div`
 export const ContentUl = styled.ul`
 	padding: 12px 0;
 	border-bottom: 1px solid ${({ theme: { colors } }) => colors.white_alpha_10};
+	width: 204px;
 
 	&:first-of-type {
 		padding-top: 0;
