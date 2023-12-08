@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 
-import { RecordIcon } from "@/constants/Icon/icon";
+import {
+	RecordIcon,
+	LaterShowIcon,
+	PlaylistIcon,
+	LikeVideoIcon,
+} from "@/constants/Icon/icon";
 
 import {
 	LayoutDiv,
@@ -13,6 +18,25 @@ import {
 	VideoListDiv,
 } from "./MyContent.styles";
 import MyContentVideoCard from "../MyContentVideoCard/MyContentVideoCard";
+
+const sectionMockItems = [
+	{
+		title: "기록",
+		icon: <RecordIcon />,
+	},
+	{
+		title: "나중에 볼 동영상",
+		icon: <LaterShowIcon />,
+	},
+	{
+		title: "재생목록",
+		icon: <PlaylistIcon />,
+	},
+	{
+		title: "좋아요 표시한 동영상",
+		icon: <LikeVideoIcon />,
+	},
+];
 
 const mockItems = [
 	{
@@ -60,28 +84,30 @@ const MyContent = () => {
 	return (
 		<LayoutDiv>
 			<InnerDiv>
-				<SectionDiv>
-					<TitleDiv>
-						<TitleInnerDiv>
-							<h2>
-								<Link to="/feed/history">
-									<RecordIcon />
-									기록
-								</Link>
-							</h2>
-							<ButtonDiv>
-								<button>모두 보기</button>
-							</ButtonDiv>
-						</TitleInnerDiv>
-					</TitleDiv>
-					<ContentDiv>
-						<VideoListDiv>
-							{mockItems.map((info) => (
-								<MyContentVideoCard id={info.id} key={info.id} />
-							))}
-						</VideoListDiv>
-					</ContentDiv>
-				</SectionDiv>
+				{sectionMockItems.map((data) => (
+					<SectionDiv key={data.title}>
+						<TitleDiv>
+							<TitleInnerDiv>
+								<h2>
+									<Link to="/feed/history">
+										{data.icon}
+										{data.title}
+									</Link>
+								</h2>
+								<ButtonDiv>
+									<button>모두 보기</button>
+								</ButtonDiv>
+							</TitleInnerDiv>
+						</TitleDiv>
+						<ContentDiv>
+							<VideoListDiv>
+								{mockItems.map((info) => (
+									<MyContentVideoCard id={info.id} key={info.id} />
+								))}
+							</VideoListDiv>
+						</ContentDiv>
+					</SectionDiv>
+				))}
 			</InnerDiv>
 		</LayoutDiv>
 	);

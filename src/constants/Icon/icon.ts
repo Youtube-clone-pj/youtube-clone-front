@@ -1,7 +1,5 @@
 import {
 	AiOutlineHome as SideHomeIcon,
-	AiOutlineClockCircle as SideAfterShowIcon,
-	AiOutlineLike as SideLikeVideoIcon,
 	AiFillTrophy as SideSportIcon,
 	AiOutlineQuestionCircle as SideCenterIcon,
 	AiOutlineInfoCircle as SideInfoIcon,
@@ -14,7 +12,6 @@ import {
 import {
 	BsPersonCircle as LoginPersonIcon,
 	BsFillCollectionPlayFill as SideSubIcon,
-	BsArrowCounterclockwise as SideShowIcon,
 	BsFlag as SideReportIcon,
 	BsBell as HeaderNotificationIcon,
 	BsSkipStart as StartIcon,
@@ -55,12 +52,15 @@ import FlowListIcon from "@/assets/icon/ic-flow-list.svg?react";
 import HeaderMenuIcon from "@/assets/icon/ic-header-menu.svg?react";
 import HistoryDeleteIcon from "@/assets/icon/ic-history-delete.svg?react";
 import HistoryStopIcon from "@/assets/icon/ic-history-stop.svg?react";
+import LaterShowIcon from "@/assets/icon/ic-later-show.svg?react";
+import LikeVideoIcon from "@/assets/icon/ic-like-video.svg?react";
 import IndexIcon from "@/assets/icon/ic-list-index.svg?react";
 import HeaderLogoIcon from "@/assets/icon/ic-logo.svg?react";
 import MinusCircleIcon from "@/assets/icon/ic-minus-circle.svg?react";
 import NotificationIcon from "@/assets/icon/ic-notification.svg?react";
 import PlaylistAddIcon from "@/assets/icon/ic-playlist-add.svg?react";
 import PlaylistSaveIcon from "@/assets/icon/ic-playlist-save.svg?react";
+import PlaylistIcon from "@/assets/icon/ic-playlist.svg?react";
 import PlusIcon from "@/assets/icon/ic-plus.svg?react";
 import ProfileCenterIcon from "@/assets/icon/ic-profile-center.svg?react";
 import ProfileChangeIcon from "@/assets/icon/ic-profile-change.svg?react";
@@ -93,10 +93,7 @@ export {
 	SideShortsIcon,
 	SideSubIcon,
 	SideMyChannelIcon,
-	SideShowIcon,
 	SideMyVideoIcon,
-	SideAfterShowIcon,
-	SideLikeVideoIcon,
 	SideHotIcon,
 	SideMusicIcon,
 	SideMovieIcon,
@@ -153,4 +150,7 @@ export {
 	FlowBoardIcon,
 	FlowListIcon,
 	RecordIcon,
+	LaterShowIcon,
+	PlaylistIcon,
+	LikeVideoIcon,
 };
