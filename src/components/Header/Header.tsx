@@ -9,6 +9,8 @@ import {
 	HeaderUploadIcon,
 	HeaderNotificationIcon,
 } from "@/constants/Icon/icon";
+import { useGoogleLoginMutation } from "@hooks/api/useGoogleLoginMutation";
+import { useGoogleLogin } from "@react-oauth/google";
 
 import {
 	HeaderLayout,
@@ -26,7 +28,7 @@ import ProfileDropdown from "./ProfileDropdown/ProfileDropdown";
 import SearchBar from "./Search/SearchBar";
 
 const Header = () => {
-	const isLogin = true;
+	const isLogin = false;
 
 	const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
 	const [isNotificationOpen, setIsNotificationOpen] = useState<boolean>(false);
@@ -51,6 +53,15 @@ const Header = () => {
 			setIsNotificationOpen(false);
 		}
 	};
+
+	const loginGoogle = useGoogleLogin({
+		onSuccess: () => {
+			useGoogleLoginMutation();
+		},
+		onError: () => {
+			useGoogleLoginMutation();
+		},
+	});
 
 	useEffect(() => {
 		if (isDropdownOpen) {
@@ -129,7 +140,7 @@ const Header = () => {
 									<HeaderMoreIcon color="#fff" />
 								</button>
 							</ButtonDiv>
-							<LoginDiv>
+							<LoginDiv onClick={() => loginGoogle()}>
 								<LoginPersonIcon />
 								<h2>로그인</h2>
 							</LoginDiv>
