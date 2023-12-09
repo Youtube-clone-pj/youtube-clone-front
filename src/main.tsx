@@ -9,16 +9,20 @@ import App from "./App.tsx";
 import GlobalStyles from "./styles/GlobalStyles.ts";
 import theme from "./styles/theme.ts";
 
+import { RecoilRoot } from "recoil";
+
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
 	<QueryClientProvider client={queryClient}>
-		<GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
-			<ThemeProvider theme={theme}>
-				<GlobalStyles />
-				<App />
-			</ThemeProvider>
-		</GoogleOAuthProvider>
-		<ReactQueryDevtools initialIsOpen={true} />
+		<RecoilRoot>
+			<GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
+				<ThemeProvider theme={theme}>
+					<GlobalStyles />
+					<App />
+				</ThemeProvider>
+			</GoogleOAuthProvider>
+			<ReactQueryDevtools initialIsOpen={true} />
+		</RecoilRoot>
 	</QueryClientProvider>,
 );

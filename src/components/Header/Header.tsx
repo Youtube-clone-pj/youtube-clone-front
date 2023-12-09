@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { useRecoilValue } from "recoil";
+
 import {
 	HeaderMenuIcon,
 	HeaderLogoIcon,
@@ -26,9 +28,10 @@ import {
 import Notification from "./Notification/Notification";
 import ProfileDropdown from "./ProfileDropdown/ProfileDropdown";
 import SearchBar from "./Search/SearchBar";
+import { isLoggedInState } from "@store/auth";
 
 const Header = () => {
-	const isLogin = false;
+	const isLoggedIn = useRecoilValue(isLoggedInState);
 
 	const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
 	const [isNotificationOpen, setIsNotificationOpen] = useState<boolean>(false);
@@ -101,7 +104,7 @@ const Header = () => {
 				<SearchBar />
 
 				<HeaderRightDiv>
-					{isLogin ? (
+					{isLoggedIn ? (
 						<RightInnerDiv>
 							<ButtonDiv>
 								<button
