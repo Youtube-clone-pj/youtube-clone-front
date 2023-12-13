@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { useRecoilValue } from "recoil";
+
 import {
 	HeaderMenuIcon,
 	HeaderLogoIcon,
@@ -9,6 +11,8 @@ import {
 	HeaderUploadIcon,
 	HeaderNotificationIcon,
 } from "@/constants/Icon/icon";
+import { useGoogleLoginMutation } from "@hooks/api/useGoogleLoginMutation";
+import { useGoogleLogin } from "@react-oauth/google";
 
 import {
 	HeaderLayout,
@@ -24,9 +28,10 @@ import {
 import Notification from "./Notification/Notification";
 import ProfileDropdown from "./ProfileDropdown/ProfileDropdown";
 import SearchBar from "./Search/SearchBar";
+import { isLoggedInState } from "@store/auth";
 
 const Header = () => {
-	const isLogin = true;
+	const isLoggedIn = useRecoilValue(isLoggedInState);
 
 	const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
 	const [isNotificationOpen, setIsNotificationOpen] = useState<boolean>(false);
@@ -51,6 +56,15 @@ const Header = () => {
 			setIsNotificationOpen(false);
 		}
 	};
+
+	const loginGoogle = useGoogleLogin({
+		onSuccess: () => {
+			useGoogleLoginMutation();
+		},
+		onError: () => {
+			useGoogleLoginMutation();
+		},
+	});
 
 	useEffect(() => {
 		if (isDropdownOpen) {
@@ -90,7 +104,7 @@ const Header = () => {
 				<SearchBar />
 
 				<HeaderRightDiv>
-					{isLogin ? (
+					{isLoggedIn ? (
 						<RightInnerDiv>
 							<ButtonDiv>
 								<button
@@ -129,7 +143,7 @@ const Header = () => {
 									<HeaderMoreIcon color="#fff" />
 								</button>
 							</ButtonDiv>
-							<LoginDiv>
+							<LoginDiv onClick={() => loginGoogle()}>
 								<LoginPersonIcon />
 								<h2>로그인</h2>
 							</LoginDiv>

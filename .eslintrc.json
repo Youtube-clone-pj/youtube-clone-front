@@ -23,31 +23,32 @@
     // "no-param-reassign": "off",
     // "prettier/prettier": ["error", { "endOfLine": "auto" }],
     // "camelcase": "off",
-    "import/order":[
-      "error",
-        {
-          "groups": [
-            "builtin",
-            "external",
-            "unknown",
-            "internal",
-            ["sibling", "parent"]
-          ],
-          "pathGroups": [
-            {
-              "pattern": "{react*,react*/*}",
-              "group": "external",
-              "position": "before"
-            }
-          ],
-          "pathGroupsExcludedImportTypes": [],
-          "alphabetize": {
-            "order": "asc",
-            "caseInsensitive": true
-          },
-          "newlines-between": "always"
-        }
-      ]
+    // "import/order":[
+    //   "error",
+    //     {
+    //       "groups": [
+    //         "builtin",
+    //         "external",
+    //         "unknown",
+    //         "internal",
+    //         ["sibling", "parent"]
+    //       ],
+    //       "pathGroups": [
+    //         {
+    //           "pattern": "{react*,react*/*}",
+    //           "group": "external",
+    //           "position": "before"
+    //         }
+    //       ],
+    //       "pathGroupsExcludedImportTypes": [],
+    //       "alphabetize": {
+    //         "order": "asc",
+    //         "caseInsensitive": true
+    //       },
+    //       "newlines-between": "always"
+    //     }
+    //   ]
+    "import/order": "off"
   },
   "settings": { 
     "import/parsers": {

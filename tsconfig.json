@@ -15,7 +15,9 @@
       "@constants/*": ["./src/constants/*"],
       "@assets/*": ["./src/assets/*"],
       "@utils/*": ["./src/utils/*"],
-      "@api/*": ["./src/api/*"]
+      "@api/*": ["./src/api/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@store/*": ["./src/store/*"]
     },
     "resolveJsonModule": true,
     "isolatedModules": true,
